@@ -1,0 +1,239 @@
+<h2 layout="row" layout-align="center center"> Consolidado de Pagos f</h2>
+  <table class="example-full-width" cellspacing="5" [formGroup]="Consolidado"><tr>
+    <td>
+      <mat-form-field appearance="fill">
+        <mat-label>Fecha Proceso</mat-label>
+        <input matInput [matDatepicker]="picker"  formControlName = "pvFechaProceso" >
+        <mat-datepicker-toggle matSuffix [for]="picker" id= pvFechaProceso></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </td>
+    <td>
+      <mat-form-field appearance="fill">
+        <mat-label>Fecha Final</mat-label>
+        <input matInput [matDatepicker]="picker1" formControlName="pvFechaFinal">
+        <mat-datepicker-toggle matSuffix [for]="picker1" id= pvFechaFinal></mat-datepicker-toggle>
+        <mat-datepicker #picker1></mat-datepicker>
+      </mat-form-field>
+    </td>
+
+    <td> 
+      <ng-container matColumnDef="myColumn">
+        <button mat-raised-button color="primary" (click)="onSubmit()" >BUSCAR</button>
+      </ng-container>
+    </td>
+    <td> 
+      <ng-container matColumnDef="myColumn">
+        <button mat-raised-button color="primary" (click)="exportexcel()" >Descargar</button>
+      </ng-container>
+    </td>
+    <td> 
+      <ng-container matColumnDef="myColumn">
+        <button mat-raised-button color="success" >Descargar TXT</button>
+      </ng-container>
+    </td>
+
+  </tr></table>
+  <br>
+  <div class="home-conten">
+
+    <mat-card-content class="mat-typography" layout-align="center center" >
+      <mat-card-title > DEBITOS NACIONALES</mat-card-title>
+
+    </mat-card-content>
+
+  </div>
+  <br>
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataDebitosN" id="consolidado">
+     
+       <ng-container matColumnDef="tipoRegistro">
+        <th mat-header-cell *matHeaderCellDef> Tipo de Registro  </th>
+
+        <td mat-cell *matCellDef="let element" >  {{element.tipoRegistro}} </td>
+      </ng-container>
+      <ng-container matColumnDef="total">
+        <th mat-header-cell *matHeaderCellDef> Total  </th>
+        <td mat-cell *matCellDef="let element"> {{element.total}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="importe">
+        <th mat-header-cell *matHeaderCellDef> Importe         </th>
+        <td mat-cell *matCellDef="let element">$ {{element.importe}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="comision">
+        <th mat-header-cell *matHeaderCellDef>  Comision        </th>
+        <td mat-cell *matCellDef="let element"> ${{element.comision}} </td>
+      </ng-container>
+      <ng-container matColumnDef="tipoMoneda" > 
+        <th mat-header-cell *matHeaderCellDef>  Tipo Moneda        </th>
+        <td mat-cell *matCellDef="let element"  > {{element.tipoMoneda}} </td>
+      </ng-container>
+      <ng-container matColumnDef="tipoPago">
+        <th mat-header-cell *matHeaderCellDef>  Tipo de pago        </th>
+        <td mat-cell *matCellDef="let element"> {{element.tipoPago}} </td>
+      </ng-container>
+      <ng-container matColumnDef="iva">
+        <th mat-header-cell *matHeaderCellDef>  Iva        </th>
+        <td mat-cell *matCellDef="let element"> ${{element.iva}} </td>
+      </ng-container>
+    
+      <tr mat-header-row *matHeaderRowDef="ColumnsDebitosN"></tr>
+      <tr mat-row *matRowDef="let row; columns: ColumnsDebitosN;"></tr>
+    </table>
+
+  </div>
+  <br>
+  <div class="home-conten">
+
+    <mat-card-content class="mat-typography" layout-align="center center" >
+      <mat-card-title > DEBITOS INTERNACIONALES</mat-card-title>
+
+    </mat-card-content>
+
+  </div>
+  <br>
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataDebitosI">
+
+     <ng-container matColumnDef="tipoRegistro">
+        <th mat-header-cell *matHeaderCellDef> Tipo de Registro  </th>
+
+        <td mat-cell *matCellDef="let element" >  {{element.tipoRegistro}} </td>
+      </ng-container>
+      <ng-container matColumnDef="total">
+        <th mat-header-cell *matHeaderCellDef> Total  </th>
+        <td mat-cell *matCellDef="let element"> {{element.total}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="importe">
+        <th mat-header-cell *matHeaderCellDef> Importe         </th>
+        <td mat-cell *matCellDef="let element">$ {{element.importe}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="comision">
+        <th mat-header-cell *matHeaderCellDef>  Comision        </th>
+        <td mat-cell *matCellDef="let element"> ${{element.comision}} </td>
+      </ng-container>
+      <ng-container matColumnDef="tipoMoneda" > 
+        <th mat-header-cell *matHeaderCellDef>  Tipo Moneda        </th>
+        <td mat-cell *matCellDef="let element"  > {{element.tipoMoneda}} </td>
+      </ng-container>
+      <ng-container matColumnDef="tipoPago">
+        <th mat-header-cell *matHeaderCellDef>  Tipo de pago        </th>
+        <td mat-cell *matCellDef="let element"> {{element.tipoPago}} </td>
+      </ng-container>
+      <ng-container matColumnDef="iva">
+        <th mat-header-cell *matHeaderCellDef>  Iva        </th>
+        <td mat-cell *matCellDef="let element"> ${{element.iva}} </td>
+      </ng-container>
+
+
+      <tr mat-header-row *matHeaderRowDef="ColumnsDebitosI"></tr>
+      <tr mat-row *matRowDef="let row; columns: ColumnsDebitosI;"></tr>
+    </table> 
+  </div>
+  <br>
+
+<br>
+  <div class="home-conten">
+
+    <mat-card-content class="mat-typography" layout-align="center center" >
+      <mat-card-title > CREDITOS NACIONALES</mat-card-title>
+
+    </mat-card-content>
+
+  </div>
+  <br>
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataCreditosN">
+
+     <ng-container matColumnDef="tipoRegistro">
+        <th mat-header-cell *matHeaderCellDef> Tipo de Registro  </th>
+
+        <td mat-cell *matCellDef="let element" >  {{element.tipoRegistro}} </td>
+      </ng-container>
+      <ng-container matColumnDef="total">
+        <th mat-header-cell *matHeaderCellDef> Total  </th>
+        <td mat-cell *matCellDef="let element"> {{element.total}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="importe">
+        <th mat-header-cell *matHeaderCellDef> Importe         </th>
+        <td mat-cell *matCellDef="let element">$ {{element.importe}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="comision">
+        <th mat-header-cell *matHeaderCellDef>  Comision        </th>
+        <td mat-cell *matCellDef="let element"> ${{element.comision}} </td>
+      </ng-container>
+      <ng-container matColumnDef="tipoMoneda" > 
+        <th mat-header-cell *matHeaderCellDef>  Tipo Moneda        </th>
+        <td mat-cell *matCellDef="let element"  > {{element.tipoMoneda}} </td>
+      </ng-container>
+      <ng-container matColumnDef="tipoPago">
+        <th mat-header-cell *matHeaderCellDef>  Tipo de pago        </th>
+        <td mat-cell *matCellDef="let element"> {{element.tipoPago}} </td>
+      </ng-container>
+      <ng-container matColumnDef="iva">
+        <th mat-header-cell *matHeaderCellDef>  Iva        </th>
+        <td mat-cell *matCellDef="let element"> ${{element.iva}} </td>
+      </ng-container>
+
+
+      <tr mat-header-row *matHeaderRowDef="ColumnsCreditosN"></tr>
+      <tr mat-row *matRowDef="let row; columns: ColumnsCreditosN;"></tr>
+    </table> 
+  </div>
+  <br>
+<div class="home-conten">
+
+    <mat-card-content class="mat-typography" layout-align="center center" >
+      <mat-card-title > CREDITOS INTERNACIONALES</mat-card-title>
+
+    </mat-card-content>
+
+  </div>
+  <br>
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataCreditosI">
+
+     <ng-container matColumnDef="tipoRegistro">
+        <th mat-header-cell *matHeaderCellDef> Tipo de Registro  </th>
+
+        <td mat-cell *matCellDef="let element" >  {{element.tipoRegistro}} </td>
+      </ng-container>
+      <ng-container matColumnDef="total">
+        <th mat-header-cell *matHeaderCellDef> Total  </th>
+        <td mat-cell *matCellDef="let element"> {{element.total}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="importe">
+        <th mat-header-cell *matHeaderCellDef> Importe         </th>
+        <td mat-cell *matCellDef="let element">$ {{element.importe}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="comision">
+        <th mat-header-cell *matHeaderCellDef>  Comision        </th>
+        <td mat-cell *matCellDef="let element"> ${{element.comision}} </td>
+      </ng-container>
+      <ng-container matColumnDef="tipoMoneda" > 
+        <th mat-header-cell *matHeaderCellDef>  Tipo Moneda        </th>
+        <td mat-cell *matCellDef="let element"  > {{element.tipoMoneda}} </td>
+      </ng-container>
+      <ng-container matColumnDef="tipoPago">
+        <th mat-header-cell *matHeaderCellDef>  Tipo de pago        </th>
+        <td mat-cell *matCellDef="let element"> {{element.tipoPago}} </td>
+      </ng-container>
+      <ng-container matColumnDef="iva">
+        <th mat-header-cell *matHeaderCellDef>  Iva        </th>
+        <td mat-cell *matCellDef="let element"> ${{element.iva}} </td>
+      </ng-container>
+
+
+      <tr mat-header-row *matHeaderRowDef="ColumnsCreditosI"></tr>
+      <tr mat-row *matRowDef="let row; columns: ColumnsCreditosI;"></tr>
+    </table> 
+  </div>
+  

@@ -1,0 +1,15 @@
+mat-drawer-container {
+  height: 100%;
+}
+
+mat-drawer {
+  width: 18%;
+}
+
+.container {
+  min-height: calc(100vh - 65px);
+}
+
+.container-main {
+  background: inherit;
+}

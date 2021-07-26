@@ -1,0 +1,153 @@
+<h2 mat-dialog-title >CARGO/ABONO<input matInput [(ngModel)]="data.DetalleCarga.descripcionError"> </h2>
+<mat-dialog-content class="mat-typography">
+
+	<table class="example-full-width" id="prueba" ><tr>
+		<td >
+			<mat-form-field class="example-full-width">
+				<mat-label>Fecha Carga:</mat-label>
+				<input matInput  [(ngModel)]= "data.DetalleCarga.dtFechaCarga" disabled="disabled">
+				
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Número Afiliación:</mat-label>
+				<input matInput  [(ngModel)]="data.DetalleCarga.vNoAfiliacion"  >
+				
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Numero Autorizacion:</mat-label>
+				<input matInput    [(ngModel)]="data.DetalleCarga.vAutorizacion" disabled="disabled" >
+				
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Numero Tarjeta:</mat-label>
+				<input matInput  p [(ngModel)]="data.DetalleCarga.vNoPlastico" disabled="disabled" >
+				
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Importe Transacción</mat-label>
+				<input matInput  [(ngModel)]="data.DetalleCarga.mImporteTxn"  >
+				
+			</mat-form-field>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Estatus Amex:</mat-label>
+				<input matInput  placeholder="210211" [(ngModel)]="data.DetalleCarga.estatusAMEX" disabled="disabled" >
+				
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Codigo Error:</mat-label>
+				<input matInput  placeholder="400.01" [(ngModel)]="data.DetalleCarga.codigoError" disabled="disabled" >
+				
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Descripción Error:</mat-label>
+				<input matInput  placeholder="003532" [(ngModel)]="data.DetalleCarga.descripcionError"  disabled="disabled">
+				
+			</mat-form-field>
+		</td>
+	
+		<td>
+			<mat-form-field>
+			    <mat-label>Area</mat-label>
+			    <mat-select [(ngModel)]="data.DetalleCarga.vArea" >
+			      <mat-option value="cadena"  *ngFor="let Area of data.vArea" [value]="Area.claveCatalogo">{{Area.descripcionCatalogo}}</mat-option>
+			    </mat-select>
+			 </mat-form-field>
+		</td>
+		<td>
+			<mat-form-field>
+	          <mat-label>Movimiento</mat-label>
+	          <mat-select [(ngModel)]="data.DetalleCarga.vMovimiento"  tabindex="-1" >
+	            <mat-option value="cadena"  *ngFor="let Movimiento of data.vMovimiento" [value]="Movimiento.claveCatalogo">{{Movimiento.descripcionCatalogo}}</mat-option>
+	          </mat-select>
+	        </mat-form-field>
+		</td>
+
+	</tr>
+	<tr>
+		<td> 
+			<mat-form-field>
+	          <mat-label>Proceso</mat-label>
+	          <mat-select [(ngModel)]="data.DetalleCarga.vProceso"  tabindex="-1" >
+	            <mat-option value="cadena"  *ngFor="let Proceso of data.vProceso" [value]="Proceso.claveCatalogo">{{Proceso.descripcionCatalogo}}</mat-option>
+	          </mat-select>
+	        </mat-form-field>
+		</td>
+		<td> 
+			<mat-form-field>
+	          <mat-label>Leyenda</mat-label>
+	          <mat-select [(ngModel)]="data.DetalleCarga.vLeyenda" tabindex="-1" >
+	            <mat-option value="cadena"  *ngFor="let Leyenda of data.vLeyenda" [value]="Leyenda.claveCatalogo">{{Leyenda.descripcionCatalogo}}</mat-option>
+	          </mat-select>
+	        </mat-form-field>
+		</td>
+	
+		<td>
+			<mat-form-field>
+	          <mat-label>Divisa</mat-label>
+	          <mat-select [(ngModel)]="data.DetalleCarga.vDivisa"  tabindex="-1" >
+	            <mat-option value="cadena"  *ngFor="let Divisa of data.vDivisa" [value]="Divisa.claveCatalogo">{{Divisa.descripcionCatalogo}}</mat-option>
+	          </mat-select>
+	        </mat-form-field>
+		</td>
+		<td>
+			<mat-form-field>
+	          <mat-label>Cobro</mat-label>
+	          <mat-select [(ngModel)]="data.DetalleCarga.vCobro" tabindex="-1" >
+	            <mat-option value="cadena"  *ngFor="let Cobro of data.vCobro" [value]="Cobro.claveCatalogo">{{Cobro.descripcionCatalogo}}</mat-option>
+	          </mat-select>
+	        </mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Emisor:</mat-label>
+				<input matInput  placeholder="484" [(ngModel)]="data.DetalleCarga.vEmisor" disabled="disabled" >
+				
+			</mat-form-field>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>vAdquirente:</mat-label>
+				<input matInput  placeholder="484" [(ngModel)]="data.DetalleCarga.vAdquirente" disabled="disabled" >
+				
+			</mat-form-field>
+		</td>
+	</tr>
+	
+</table>
+
+</mat-dialog-content>
+<mat-dialog-actions align="end" *ngIf="data.elementD.vEstatus == 'RECIBIDO - ABONO'">
+	<button mat-raised-button color="warn" mat-dialog-close>CERRAR</button>
+	<button mat-raised-button color="primary" (click)="validacargaabono(data)" mat-dialog-close  cdkFocusInitial>APLICAR CARGO/ABONO</button>
+	<button mat-raised-button color="primary"   (click)="modifica(data)" mat-dialog-close  cdkFocusInitial>Cambiar Estatus a Recibido</button>
+	
+</mat-dialog-actions>
+<mat-dialog-actions align="end" *ngIf="data.elementD.vEstatus == 'RECIBIDO - CARGO'">
+	<button mat-raised-button color="warn" mat-dialog-close>CERRAR</button>
+	<button mat-raised-button color="primary" (click)="validacargaabono(data)" mat-dialog-close  cdkFocusInitial>APLICAR CARGO/ABONO</button>
+	<button mat-raised-button color="primary"  (click)="modifica(data)" mat-dialog-close  cdkFocusInitial>Cambiar Estatus a Recibido</button>
+	
+</mat-dialog-actions>
+<mat-dialog-actions align="end" *ngIf="data.elementD.vEstatus == 'RECIBIDO'">
+	<button mat-raised-button color="warn" mat-dialog-close>CERRAR</button>
+	<button mat-raised-button color="primary" (click)="validacargaabono(data)" mat-dialog-close  cdkFocusInitial>APLICAR CARGO/ABONO</button>
+	<!-- <button mat-raised-button color="primary"    (click)="modifica(data)" mat-dialog-close  cdkFocusInitial>Cambiar Estatus a Recibido</button> -->
+</mat-dialog-actions>

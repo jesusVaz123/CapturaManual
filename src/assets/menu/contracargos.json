@@ -1,0 +1,105 @@
+{
+  "back": {
+    "label": "Menú principal",
+    "path": "main",
+    "more": true
+  },
+  "title": "Contracargos",
+  "menu": [
+    {
+      "label": "Internacionales",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Nacionales",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Captura manual",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Estadísticas",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Procesos",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Misceláneos",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Formatos",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Calificación global CR 79",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Datos del negocio",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Ficha de Aviso",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "MultiCambios",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Modificación CC",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Salidas a deudor",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Interface al Log ",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Pre y Cumplimientos",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Complemento",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Cartas a Negocios",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Actualización de cargos cílicos dólares",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Cartas a Negocios",
+      "path": "",
+      "more": false
+    }
+  ]
+}

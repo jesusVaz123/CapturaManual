@@ -1,0 +1,40 @@
+{
+    "back": {
+      "label": "Rechazos Emisor Amex-OptBlue",
+      "path": "main",
+      "more": true
+    },
+    "title": "Gestión de Rechazos Nacional",
+    "menu": [
+
+          {
+        "label": "Rechazos",
+        "path": "rechazos-nacional",
+        "more": false
+      },
+        {
+        "label": "Fuente Papel",
+        "path": "captura-manual",
+        "more": false
+      },
+      {
+        "label": "Consulta Archivo",
+        "path": "consulta-archivo",
+        "more": false
+      },
+      {
+        "label": "Carga Emisor Nacional",
+        "path": "carga-emisor-nacional",
+        "more": false
+      },
+      {
+        "label": "Carga Adquirente",
+        "path": "carga-adquirente",
+        "more": false
+      }
+
+
+
+
+    ]
+  }

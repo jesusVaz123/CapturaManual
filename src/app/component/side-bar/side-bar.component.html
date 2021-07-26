@@ -1,0 +1,35 @@
+<div id='side-nav'>
+  <div class='side-header'>
+    <div class='align-center'>
+       <img class='side-img' src='assets/eglobal2.png' alt='logo-adquiriente' font='32px'>
+      <!--<app-button type='icon' icon='icon-swap-adquiriente' font='32px' (click)="changeAdquiriente()"></app-button> -->
+
+    </div>
+
+    <span class='user'>{{user && user.fullName}}</span>
+    <span class='detail'>{{user && user.role}}</span>
+    <span class='detail'>{{user && user.lastDate}}</span>
+
+    <app-button class='align-center ' icon='icon-go-out' type='chip' text='Salir' (click)='goOut()'></app-button>
+
+    <hr class='side-separator'>
+    <span matRipple class='menu return' (click)='loadPage(menu.back,0)' *ngIf='menu.back'>
+      <i *ngIf='menu.back.more'></i>
+      {{menu.back.label}}
+    </span>
+
+    <span class='title' *ngIf='menu.title'>
+      {{menu.title}}
+    </span>
+  </div>
+
+  <div class='side-item'>
+    <div matRipple [ngClass]="{'active': positionActive == i }" class='side-body'
+        *ngFor='let item of menu.menu;let i = index' (click)='loadPage(item,i)'>
+      <span class='menu'>
+        {{item.label}}
+      </span>
+      <i class='linsce-icon {{icon.menu}}' *ngIf='item.more'></i>
+    </div>
+  </div>
+</div>

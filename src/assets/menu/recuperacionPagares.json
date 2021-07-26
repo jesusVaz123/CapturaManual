@@ -1,0 +1,30 @@
+{
+  "back": {
+    "label": "Menú principal",
+    "path": "main",
+    "more": true
+  },
+  "title": "Recuperación de pagarés",
+  "menu": [
+    {
+      "label": "Gestión de casos",
+      "path": "/recuperacion-pagares/gestion-casos",
+      "more": false
+    },
+    {
+      "label": "Captura Manual",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Estadísticas",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Procesos",
+      "path": "procesos",
+      "more": true
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "/api/*": {
+  	"target":"http://localhost:8446/capturamanual-api/v1/",
+   "secure": false,
+   "logLevel" : "debug",
+   "changeOrign": true,
+   "pathRewrite": {
+        "^/api": ""
+      }
+  }
+}

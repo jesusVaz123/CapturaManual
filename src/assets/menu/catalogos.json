@@ -1,0 +1,112 @@
+{
+  "back": {
+    "label": "Menú principal ",
+    "path": "main",
+    "more": true
+  },
+  "title": "Catálogos",
+  "menu": [
+    {
+      "label": "Adquirientes",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Emisores",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Auditor de comercios",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Envío a auditor de comercios",
+      "path": "",
+      "more": false
+    },{
+      "label": "Comercios",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Cargas de trabajo CC",
+      "path": "",
+      "more": false
+    },{
+      "label": "Áreas",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Estatus RP",
+      "path": "",
+      "more": false
+    },{
+      "label": "Códigos de razón",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Estados",
+      "path": "",
+      "more": false
+    },{
+      "label": "Mensajerías RP",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Tipo de documento",
+      "path": "",
+      "more": false
+    },{
+      "label": "Reglas de negocio",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Ciudad",
+      "path": "",
+      "more": false
+    },{
+      "label": "Parámetros",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Bienes",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Días festivos",
+      "path": "",
+      "more": false
+    },{
+      "label": "Subestatus",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Comercios SUN",
+      "path": "",
+      "more": false
+    },{
+      "label": "Actualización de comercios masivos",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Grupos",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Operativas",
+      "path": "",
+      "more": false
+    }
+  ]
+}

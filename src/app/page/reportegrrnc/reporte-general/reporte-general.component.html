@@ -1,0 +1,239 @@
+
+<div class="home-conten">
+  <mat-card style="display:flex;justify-content:center;align-items:center;">
+    <mat-card-content class="mat-typography" layout-align="center center" >
+      <mat-card-title > E-GLOBAL SERVICIOS ELECTRONICOS GLOBALES</mat-card-title>
+      <mat-card-title> DETALLE GRRCN</mat-card-title>
+    </mat-card-content>
+  </mat-card>
+</div>
+<br>
+<table class="example-full-width" cellspacing="0"><tr>
+  <td>
+    <mat-form-field appearance="fill">
+      <mat-label>Fecha Inicial</mat-label>
+      <input matInput [matDatepicker]="picker6">
+      <mat-datepicker-toggle matSuffix [for]="picker6"> 
+      </mat-datepicker-toggle>
+      <mat-datepicker #picker6>
+      </mat-datepicker>
+    </mat-form-field>
+  </td>
+  <td>
+    <mat-form-field appearance="fill">
+      <mat-label>Fecha Final</mat-label>
+      <input matInput [matDatepicker]="picker7">
+      <mat-datepicker-toggle matSuffix [for]="picker7">
+      </mat-datepicker-toggle>
+      <mat-datepicker #picker7>
+      </mat-datepicker>
+    </mat-form-field>
+  </td>
+  <td> 
+    <ng-container matColumnDef="myColumn">
+      <button mat-raised-button color="primary" >BUSCAR</button>
+    </ng-container>
+  </td>
+  
+        <td> 
+    <ng-container matColumnDef="myColumn">
+      <button mat-raised-button color="primary"  >Descargar</button>
+    </ng-container>
+  </td>
+</tr>
+</table>
+<br>
+<mat-card-content class="mat-typography" layout-align="center center" >
+  <mat-card-title > Registro de Precios   </mat-card-title>
+</mat-card-content>
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataHeader">
+    <ng-container matColumnDef="fechacreacion">
+      <th mat-header-cell *matHeaderCellDef> Fecha Creación </th>
+      <td mat-cell *matCellDef="let element"> {{element.fechacreacion}} </td>
+    </ng-container>
+    <ng-container matColumnDef="horacreacion">
+      <th mat-header-cell *matHeaderCellDef> Hora Creación </th>
+      <td mat-cell *matCellDef="let element"> {{element.horacreacion}} </td>
+    </ng-container>
+    <ng-container matColumnDef="numsecuencia">
+      <th mat-header-cell *matHeaderCellDef> Número de Secuencia  </th>
+      <td mat-cell *matCellDef="let element"> {{element.numsecuencia}} </td>
+    </ng-container>
+    <ng-container matColumnDef="idarchivo">
+      <th mat-header-cell *matHeaderCellDef> Id Archivo</th>
+      <td mat-cell *matCellDef="let element"> {{element.idarchivo}} </td>
+    </ng-container>
+    <ng-container matColumnDef="nomarchivo">
+      <th mat-header-cell *matHeaderCellDef> Nombre Archivo  </th>
+      <td mat-cell *matCellDef="let element"> {{element.nomarchivo}}</td> 
+    </ng-container>
+    <ng-container matColumnDef="versionarchivo">
+      <th mat-header-cell *matHeaderCellDef> Versión Archivo  </th>
+      <td mat-cell *matCellDef="let element"> {{element.versionarchivo}}</td> 
+    </ng-container>
+    
+    <tr mat-header-row *matHeaderRowDef="ColumnsHeader"></tr>
+    <tr mat-row *matRowDef="let row; columns: ColumnsHeader;"></tr>
+  </table>
+</div>
+
+<br>
+<mat-card-content class="mat-typography" layout-align="center center" >
+  <mat-card-title > Registro de Cierre de Lotes   </mat-card-title>
+</mat-card-content>
+
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource">
+    <ng-container matColumnDef="idcom">
+      <th mat-header-cell *matHeaderCellDef> ID Comercio </th>
+      <td mat-cell *matCellDef="let element"> {{element.idcom}} </td>
+    </ng-container>
+    <ng-container matColumnDef="tipocuenta">
+      <th mat-header-cell *matHeaderCellDef> Tipo de Cuenta </th>
+      <td mat-cell *matCellDef="let element"> {{element.tipocuenta}} </td>
+    </ng-container>
+    <ng-container matColumnDef="numpago">
+      <th mat-header-cell *matHeaderCellDef> Número de Pago  </th>
+      <td mat-cell *matCellDef="let element"> {{element.numpago}} </td>
+    </ng-container>
+    <ng-container matColumnDef="fechapago">
+      <th mat-header-cell *matHeaderCellDef> Fecha de Pago </th>
+      <td mat-cell *matCellDef="let element"> {{element.fechapago}} </td>
+    </ng-container>
+    <ng-container matColumnDef="monpago">
+      <th mat-header-cell *matHeaderCellDef> Moneda de Pago  </th>
+      <td mat-cell *matCellDef="let element"> {{element.monpago}}</td> 
+    </ng-container>
+     <ng-container matColumnDef="refpago">
+      <th mat-header-cell *matHeaderCellDef> Referencia de Pago  </th>
+      <td mat-cell *matCellDef="let element"> {{element.refpago}}</td> 
+    </ng-container>
+     <ng-container matColumnDef="montonetopago">
+      <th mat-header-cell *matHeaderCellDef> Monto Neto Pago  </th>
+      <td mat-cell *matCellDef="let element"> {{element.montonetopago}}</td> 
+    </ng-container>
+    <ng-container matColumnDef="montobruto">
+      <th mat-header-cell *matHeaderCellDef> Monto Bruto Pago  </th>
+      <td mat-cell *matCellDef="let element"> {{element.montobruto}}</td> 
+    </ng-container>
+    <ng-container matColumnDef="montodesc">
+      <th mat-header-cell *matHeaderCellDef> Monto Descuento Pago  </th>
+      <td mat-cell *matCellDef="let element"> {{element.montodesc}}</td> 
+    </ng-container>
+    <ng-container matColumnDef="montoservicio">
+      <th mat-header-cell *matHeaderCellDef> Monto Servicio</th>
+      <td mat-cell *matCellDef="let element"> {{element.montoservicio}}</td> 
+    </ng-container>
+    <ng-container matColumnDef="montoajuste">
+      <th mat-header-cell *matHeaderCellDef> Monto Ajuste </th>
+      <td mat-cell *matCellDef="let element"> {{element.montoajuste}}</td> 
+    </ng-container>
+    <ng-container matColumnDef="montoimpuesto">
+      <th mat-header-cell *matHeaderCellDef> Monto Impuestos  </th>
+      <td mat-cell *matCellDef="let element"> {{element.montoimpuesto}}</td> 
+    </ng-container>
+    <ng-container matColumnDef="montosaldodebito">
+      <th mat-header-cell *matHeaderCellDef> Monto Saldo Debito  </th>
+      <td mat-cell *matCellDef="let element"> {{element.montosaldodebito}}</td> 
+    </ng-container> 
+    <ng-container matColumnDef="numdepositodirecto">
+      <th mat-header-cell *matHeaderCellDef> Número Deposito Directo  </th>
+      <td mat-cell *matCellDef="let element"> {{element.numdepositodirecto}}</td> 
+    </ng-container>
+    <ng-container matColumnDef="cuentabancaria">
+      <th mat-header-cell *matHeaderCellDef> Cuenta Bancaria  </th>
+      <td mat-cell *matCellDef="let element"> {{element.cuentabancaria}}</td> 
+    </ng-container>
+    <ng-container matColumnDef="cuentabancariainter">
+      <th mat-header-cell *matHeaderCellDef> Cuenta Bancaria Interna  </th>
+      <td mat-cell *matCellDef="let element"> {{element.cuentabancariainter}}</td> 
+    </ng-container>
+    <ng-container matColumnDef="codigobanco">
+      <th mat-header-cell *matHeaderCellDef>  Codigo Baco  </th>
+      <td mat-cell *matCellDef="let element"> {{element.codigobanco}}</td> 
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
+
+<br>
+<!-- <mat-card-content class="mat-typography" layout-align="center center" >
+  <mat-card-title > Registro de Contracargos  </mat-card-title>
+</mat-card-content> -->
+
+<!-- <div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource">
+    <ng-container matColumnDef="idcom">
+      <th mat-header-cell *matHeaderCellDef> ID de comerciante beneficiario </th>
+      <td mat-cell *matCellDef="let element"> {{element.idcom}} </td>
+    </ng-container>
+    <ng-container matColumnDef="tipocuenta">
+      <th mat-header-cell *matHeaderCellDef> Número de pago amex </th>
+      <td mat-cell *matCellDef="let element"> {{element.tipocuenta}} </td>
+    </ng-container>
+    <ng-container matColumnDef="numpago">
+      <th mat-header-cell *matHeaderCellDef> Fecha de pago  </th>
+      <td mat-cell *matCellDef="let element"> {{element.numpago}} </td>
+    </ng-container>
+    <ng-container matColumnDef="fechapago">
+      <th mat-header-cell *matHeaderCellDef> Moneda de Pago </th>
+      <td mat-cell *matCellDef="let element"> {{element.fechapago}} </td>
+    </ng-container>
+    <ng-container matColumnDef="monpago">
+      <th mat-header-cell *matHeaderCellDef> ID de sub comerciante  </th>
+      <td mat-cell *matCellDef="let element"> {{element.monpago}}</td> 
+    </ng-container>
+     <ng-container matColumnDef="refpago">
+      <th mat-header-cell *matHeaderCellDef> Sub fecha de negocio  </th>
+      <td mat-cell *matCellDef="let element"> {{element.refpago}}</td> 
+    </ng-container>
+     <ng-container matColumnDef="montonetopago">
+      <th mat-header-cell *matHeaderCellDef> Fecha de Proceso Amex  </th>
+      <td mat-cell *matCellDef="let element"> {{element.montonetopago}}</td> 
+    </ng-container>
+    <ng-container matColumnDef="montobruto">
+      <th mat-header-cell *matHeaderCellDef> Número de factura  </th>
+      <td mat-cell *matCellDef="let element"> {{element.montobruto}}</td> 
+    </ng-container>
+    <ng-container matColumnDef="montodesc">
+      <th mat-header-cell *matHeaderCellDef> Moneda secundaria  </th>
+      <td mat-cell *matCellDef="let element"> {{element.montodesc}}</td> 
+    </ng-container>
+    <ng-container matColumnDef="montoservicio">
+      <th mat-header-cell *matHeaderCellDef> Número de referencia de la factura</th>
+      <td mat-cell *matCellDef="let element"> {{element.montoservicio}}</td> 
+    </ng-container>
+    <ng-container matColumnDef="montoajuste">
+      <th mat-header-cell *matHeaderCellDef> Número de cuenta de tarjeta </th>
+      <td mat-cell *matCellDef="let element"> {{element.montoajuste}}</td> 
+    </ng-container>
+    <ng-container matColumnDef="montoimpuesto">
+      <th mat-header-cell *matHeaderCellDef> Monto de Transacción  </th>
+      <td mat-cell *matCellDef="let element"> {{element.montoimpuesto}}</td> 
+    </ng-container>
+    <ng-container matColumnDef="montosaldodebito">
+      <th mat-header-cell *matHeaderCellDef> Importe de la tarifa de servicio  </th>
+      <td mat-cell *matCellDef="let element"> {{element.montosaldodebito}}</td> 
+    </ng-container> 
+    <ng-container matColumnDef="numdepositodirecto">
+      <th mat-header-cell *matHeaderCellDef> Tasa de descuento  </th>
+      <td mat-cell *matCellDef="let element"> {{element.numdepositodirecto}}</td> 
+    </ng-container>
+    <ng-container matColumnDef="cuentabancaria">
+      <th mat-header-cell *matHeaderCellDef> Importe de descuento  </th>
+      <td mat-cell *matCellDef="let element"> {{element.cuentabancaria}}</td> 
+    </ng-container>
+    <ng-container matColumnDef="cuentabancariainter">
+      <th mat-header-cell *matHeaderCellDef> Codigo de Contracargo  </th>
+      <td mat-cell *matCellDef="let element"> {{element.cuentabancariainter}}</td> 
+    </ng-container>
+    <ng-container matColumnDef="codigobanco">
+      <th mat-header-cell *matHeaderCellDef>  Descripción de contracargo </th>
+      <td mat-cell *matCellDef="let element"> {{element.codigobanco}}</td> 
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div> -->

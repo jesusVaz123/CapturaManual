@@ -1,0 +1,17 @@
+  <div class="button ripple" *ngIf="type === 'button'" (click)="action($event)">
+      {{text}}
+  </div>
+
+  <div class="chip ripple" *ngIf="type === 'chip'" (click)="action($event)">
+    <i class="linsce-icon {{icon}}"></i>
+    {{text}}
+  </div>
+
+  <div class='icon ripple' *ngIf="type === 'icon'" (click)="action($event)">
+    <i class="linsce-icon {{icon}}"></i>
+    {{text}}
+  </div>
+
+  <span class="link" *ngIf="type === 'link'" (click)="action($event)">
+    {{text}}
+  </span>

@@ -1,0 +1,24 @@
+{
+  "back": {
+    "label": "Rechazos Emisor Amex-OptBlue",
+    "path": "main",
+    "more": true
+  },
+  "title": "Conciliación de Pagos",
+  "menu": [
+    
+        {
+      "label": "Consolidado Pagos",
+      "path": "consolidado-pagos",
+      "more": false
+    },
+      {
+      "label": "Detalle de Pagos",
+      "path": "detalle-pagos",
+      "more": false
+    }
+  
+  
+  
+  ]
+}

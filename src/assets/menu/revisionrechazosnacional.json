@@ -1,0 +1,28 @@
+{
+  "back": {
+    "label": "Rechazos Emisor Amex-OptBlue",
+    "path": "main",
+    "more": true
+  },
+  "title": "Revisión de Rechazos Nacional",
+  "menu": [
+    
+        {
+      "label": "Rechazos",
+      "path": "rechazos-nacional",
+      "more": false
+    },
+      {
+      "label": "Fuente Papel",
+      "path": "captura-manual",
+      "more": false
+    },
+    {
+      "label": "Consulta Archivo",
+      "path": "consulta-archivo",
+      "more": false
+    }
+  
+  
+  ]
+}

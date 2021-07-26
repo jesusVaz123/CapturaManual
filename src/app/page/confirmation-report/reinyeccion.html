@@ -1,0 +1,218 @@
+
+<h5 mat-dialog-title > REINYECCIÓN:<input matInput [(ngModel)]="data.dataR.vCodDesc" > </h5>
+<mat-dialog-content class="mat-typography">
+
+	<table class="example-full-width" id="prueba" ><tr>
+		<td >
+			<mat-form-field class="example-full-width">
+				<mat-label>Llave de Registro:</mat-label>
+				<input matInput  [(ngModel)]= "data.dataR.vRegLlave" readonly="data.vRegLlave" disabled="disabled">
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Fecha Proceso:</mat-label>
+				<input matInput  [(ngModel)]="data.dataR.dtFechaProceso"  disabled="disabled">
+				
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>ID de la Transaccion:</mat-label>
+				<input matInput   placeholder="000000000000001" [(ngModel)]="data.dataR.vTransId" disabled="disabled">
+				
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Numero de Autoizacion:</mat-label>
+				<input matInput  placeholder="000001" [(ngModel)]="data.dataR.vNumAutoriza"  >
+				
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Numero de Plastico:</mat-label>
+				<input matInput  placeholder="Numero de Pl�stico" [(ngModel)]="data.dataR.vNoPlastico"  >
+				
+			</mat-form-field>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Fecha de TXN:</mat-label>
+				<input matInput  placeholder="210211" [(ngModel)]="data.dataR.vFechaTxn" disabled="disabled" >
+				
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Importe de la TXN:</mat-label>
+				<input matInput  placeholder="400.01" [(ngModel)]="data.dataR.mImporteTxn"  >
+				
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Hora de la TXN:</mat-label>
+				<input matInput  placeholder="003532" [(ngModel)]="data.dataR.vHoraTxn"  disabled="disabled">
+				
+			</mat-form-field>
+		</td>
+	
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Codigo de la Transaccion:</mat-label>
+				<input matInput  placeholder="05" [(ngModel)]="data.dataR.vCodTra"  >
+				
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Tipo de plan:</mat-label>
+				<input matInput  placeholder="00" [(ngModel)]="data.dataR.vTipoPlan"  >
+				
+			</mat-form-field>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Codigo de proceso:</mat-label>
+				<input matInput  placeholder="000000" [(ngModel)]="data.dataR.vProcCode"  >
+				
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Tipo moneda:</mat-label>
+				<input matInput  placeholder="484" [(ngModel)]="data.dataR.vTipoMoneda"  >
+				
+			</mat-form-field>
+		</td>
+	
+	
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Codigo de parcializacion:</mat-label>
+				<input matInput  placeholder="00" [(ngModel)]="data.dataR.vParcializacion"  >
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>ID de Giro:</mat-label>
+				<input matInput  placeholder="ID de Giro" [(ngModel)]="data.dataR.vIdGiro" disabled="disabled" >
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Numero de Afiliacion:</mat-label>        
+				<input matInput  placeholder="0000001" [(ngModel)]="data.dataR.vNoAfiliacion"  >
+			</mat-form-field>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Numero de Afiliacion AMEX:</mat-label>
+				<input matInput  placeholder="0024794 " [(ngModel)]="data.dataR.vNoAfiliacionAmex"  >
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Razon Social:</mat-label>
+				<input matInput  placeholder="AGEN LLANTERA T BORUND" [(ngModel)]="data.dataR.vRazonSocial"  >
+
+			</mat-form-field>
+		</td>
+	
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Numero de calle:</mat-label>
+				<input matInput  placeholder="AV TEOFILO BORUNDA NO 402" [(ngModel)]="data.dataR.vCalleNo"  >
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Nombre de la Ciudad:</mat-label>
+				<input matInput  placeholder="CHIHUAHUA CHI" [(ngModel)]="data.dataR.vCiudad"  >
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Codigo del Estado:</mat-label>
+				<input matInput  placeholder="CH " [(ngModel)]="data.dataR.vCodEstado "  disabled="disabled">
+			</mat-form-field>
+		</td>
+	</tr>
+	<tr>
+		
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Codigo del Pais:</mat-label>
+				<input matInput  placeholder="484" [(ngModel)]="data.dataR.vCodPaisBr" disabled="disabled" >
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Codigo Postal:</mat-label>
+				<input matInput  placeholder="31000" [(ngModel)]="data.dataR.vCodPostal"  >
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Pos Data:</mat-label>
+				<input matInput  placeholder="51110150030C " [(ngModel)]="data.dataR.vPosData"  >
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>ID del Emisor:</mat-label>
+				<input matInput   [(ngModel)]="data.dataR.vEmisor"  disabled="disabled">
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>ID del Adquirente:</mat-label>
+				<input matInput   [(ngModel)]="data.dataR.vAdquirente" disabled="disabled" >
+			</mat-form-field>
+		</td>
+		</tr>
+	<tr>
+		<!-- <td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Id ultima modificacion:</mat-label>
+				<input matInput  placeholder="cgaoutamexob " [(ngModel)]="data.vIdUltimaMod"  >
+			</mat-form-field>
+		</td> -->
+	
+		<!-- <td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Fecha ultima modificacion:</mat-label>
+				<input matInput  placeholder="2021-02-05 13:37:29.0 " [(ngModel)]="data.vdFechaUltimaMod"  >
+			</mat-form-field>
+		</td> -->
+<!-- 	<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Fecha Carga:</mat-label>
+				<input matInput  placeholder=" " [(ngModel)]="data.dtFechaCarga"  >
+			</mat-form-field>
+		</td> -->
+		<!-- <td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Status:</mat-label>
+				<input matInput  placeholder=" " [(ngModel)]="data.vEstatus"  >
+			</mat-form-field>
+		</td> -->
+	
+	</tr>
+</table>
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+	<button mat-raised-button color="warn" mat-dialog-close>CERRAR</button>
+	<button mat-raised-button color="primary" (click)="valida(data)" mat-dialog-close  cdkFocusInitial> REINYECCIÓN</button>
+	<button mat-raised-button color="primary"   *ngIf="data.ConfR == 'RECIBIDO - REINYECCION'" (click)="modifica(data)" mat-dialog-close  cdkFocusInitial>Cambiar Estatus a Recibido</button>
+	
+</mat-dialog-actions>

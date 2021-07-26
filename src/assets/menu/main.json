@@ -1,0 +1,22 @@
+{
+  "title": "Rechazos Emisor Amex-OptBlue",
+  "menu": [
+
+
+    {
+      "label": "Gestión de Rechazos Emisor",
+      "path": "gestionrechazos",
+      "more": true
+    },
+    {
+      "label": "Gestión de Rechazos Adquirente",
+      "path": "gestionrechazosadquirente",
+      "more": true
+    },
+     {
+      "label": "Conciliación de Pagos",
+      "path": "reportegrrnc",
+      "more": true
+    }
+     ]
+}

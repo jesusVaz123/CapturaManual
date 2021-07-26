@@ -1,0 +1,35 @@
+{
+  "back": {
+    "label": "Menú principal",
+    "path": "main",
+    "more": true
+  },
+  "title": "Consultas de apoyo",
+  "menu": [
+    {
+      "label": "Facturación",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Recuperación de pagarés",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Contracargos",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Lotes",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Referencia Deudora CC.",
+      "path": "",
+      "more": false
+    }
+  ]
+}

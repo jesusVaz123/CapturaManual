@@ -1,0 +1,25 @@
+{
+  "back": {
+    "label": "Menú principal ",
+    "path": "main",
+    "more": true
+  },
+  "title": "Archivo",
+  "menu": [
+    {
+      "label": "Solicitudes Bancomer",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Solicitudes Elektra",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Solicitud área de CC Eglobal",
+      "path": "",
+      "more": false
+    }
+  ]
+}

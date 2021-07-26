@@ -1,0 +1,122 @@
+<div class="example-container">
+
+
+</div>
+<div class="user-container">
+  <div class="container">
+    <h2 layout="row" layout-align="center center">Rechazos</h2>
+    <table class="example-full-width" [formGroup]="Rechazo">
+      <tr>
+        <td>
+          <mat-form-field appearance="fill">
+            <mat-label>Fecha Inicial</mat-label>
+            <input matInput [matDatepicker]="picker" [value]="fechaactual.value" formControlName="pvFechaIni">
+            <mat-datepicker-toggle matSuffix [for]="picker" id=pvFechaIni></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field appearance="fill">
+            <mat-label>Fecha Final</mat-label>
+            <input matInput [matDatepicker]="picker1" [value]="fechaactual.value" formControlName="pvFechaFin">
+            <mat-datepicker-toggle matSuffix [for]="picker1" id=pvFechaFin></mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field appearance="fill">
+            <mat-label>Código de Transacción</mat-label>
+            <mat-select formControlName="pvCodTransaccion" multiple>
+              <mat-option  *ngFor="let codigo of _codtxn" [value]="codigo.iCodigo">{{codigo.vDescripcion}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field appearance="fill">
+            <mat-label>Código de Rechazo</mat-label>
+            <mat-select formControlName="pvCodRechazo" multiple>
+              <mat-option  *ngFor="let codigo of _codRej" [value]="codigo.iCodigo">{{codigo.vDescripcion}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </td>
+        <td>
+          <ng-container matColumnDef="myColumn">
+            <button mat-raised-button color="primary" (click)="onSubmit()" [disabled]="!Rechazo.valid">BUSCAR</button>
+          </ng-container>
+        </td>
+        <td>
+          <ng-container matColumnDef="myColumn">
+            <button mat-raised-button color="success">Descargar</button>
+          </ng-container>
+        </td>
+
+      </tr>
+    </table>
+
+    <div class="mat-elevation-z8">
+      <mat-form-field class="filter">
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filtrar Campos">
+      </mat-form-field>
+
+      <table mat-table [dataSource]="dataRechazoNac" id="rechazosintaxis">
+        <ng-container matColumnDef="modificar">
+          <th mat-header-cell *matHeaderCellDef> </th>
+          <td mat-cell *matCellDef="let element">
+            <button mat-raised-button color="success" (click)="openOpciones(element.vFolio)">Modificar</button>
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="detalle">
+          <th mat-header-cell *matHeaderCellDef> </th>
+          <td mat-cell *matCellDef="let element">
+            <button mat-raised-button color="primary" (click)="openDetalle(element.vFolio)">Detalle</button>
+          </td>
+        </ng-container>
+        
+        <ng-container matColumnDef="dtFechaProceso">
+          <th mat-header-cell *matHeaderCellDef> Fecha Origen</th>
+          <td mat-cell *matCellDef="let element"> {{element.vFecOrigYY}}-{{element.vFecOrigMM}}-{{element.vFecOrigDD}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="codrechazo">
+          <th mat-header-cell *matHeaderCellDef> Código Rechazo </th>
+          <td mat-cell *matCellDef="let element"> {{element.vCodResp}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="vNumNeg">
+          <th mat-header-cell *matHeaderCellDef> Número Negocio </th>
+          <td mat-cell *matCellDef="let element"> {{element.vNumNeg}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="tipoTrans">
+          <th mat-header-cell *matHeaderCellDef> Tipo de Transacción </th>
+          <td mat-cell *matCellDef="let element"> {{element.vTipTxn}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="vAdq">
+          <th mat-header-cell *matHeaderCellDef> Banco Adquirente</th>
+          <td mat-cell *matCellDef="let element"> {{element.vEmisor}} </td>
+        </ng-container>
+        <ng-container matColumnDef="vEmi">
+          <th mat-header-cell *matHeaderCellDef> Banco Emisor </th>
+          <td mat-cell *matCellDef="let element"> {{element.iEmisor}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="vImporte">
+          <th mat-header-cell *matHeaderCellDef> Importe </th>
+          <td mat-cell *matCellDef="let element"> {{element.mImpTxn}} </td>
+        </ng-container>
+        <ng-container matColumnDef="referencia">
+          <th mat-header-cell *matHeaderCellDef> Referencia </th>
+          <td mat-cell *matCellDef="let element"> {{element.vNumReferencia}} </td>
+        </ng-container>
+        <ng-container matColumnDef="rrn">
+          <th mat-header-cell *matHeaderCellDef> RRN </th>
+          <td mat-cell *matCellDef="let element"> {{element.vRRN}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="rechazosNacCol"></tr>
+        <tr mat-row *matRowDef="let row; columns: rechazosNacCol;"></tr>
+      </table>
+
+      <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+    </div>

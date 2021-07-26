@@ -1,0 +1,136 @@
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  margin-top: -75vw;
+    padding-top: 75vw;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.full-width-field {
+   width: 100%;
+}
+
+.container {
+  padding: 0rem 0rem;
+}
+.user-container {
+ /* display: flex;*/
+ /* flex-direction: column;*/
+     margin-left: 20px; /* Same as the width of the sidenav */
+   /* Increased text to enable scrolling */
+  padding: 0px 10px;
+
+
+}
+body { 
+  font-family: Roboto, Arial, sans-serif;
+  margin: 0;
+}
+
+.basic-container {
+  padding: 30px;
+}
+
+.version-info {
+  font-size: 8pt;
+  float: right;
+}
+table {
+  width: 100%;
+}
+mat-paginator{
+  width: 100%;
+   display: flex;
+     justify-content: right;
+}
+.mat-raised-button{
+  margin: 5px;
+}
+mat-form-field {
+  margin-right:-10px;
+   width: 90% !important;
+   font-size: 14px;
+  
+}
+div.row{
+   margin-left: -10px;
+    padding-top: -45px
+}
+.mat-success {
+    background-color: green;
+    color: #fff;
+}
+.mat-blue {
+    background-color: cornflowerblue;
+    color: #fff;
+}
+.filter{
+ margin-left:20px;
+ width: 95% !important;
+}
+mat-form-field {
+margin-right:-50px;
+  width: 90% !important;
+   font-size: 14px;
+/*margin: 0 -20px -20px 0;
+/*margin-right: 0px;*/
+  
+}
+
+div.row{
+   margin-left: -10px;
+    padding-top: -65px
+}
+.mat-column-myColumn{
+  width: 8% !important;
+}
+.mat-column-dtFechaProceso{
+  width: 10% !important;
+}
+.mat-column-vNoAfiliacion{
+  width: 6% !important;
+}
+.mat-column-vNumAutoriza{
+  width: 7% !important;
+}
+.mat-column-vNoPlastico{
+  width: 10% !important;
+}
+.mat-column-vNumRef{
+  width: 10% !important;
+}
+.mat-column-mImpTxn{
+  width: 8% !important;
+}
+.mat-column-vFeTxn{
+  width: 12% !important;
+}
+
+
+/*.mat-column-ierrorcode{
+  
+  width: 15% !important;
+ 
+}
+.mat-column-vrecordnumber{
+  
+  width: 15% !important;
+ 
+}
+.mat-colum-vrecordtype{
+  width: 15% !important;
+}
+.mat-column-vstatusnombre{
+  
+  width: 10% !important;
+ 
+}
+.mat-column-myColumn{
+  
+  width: 10% !important;
+ 
+}*/

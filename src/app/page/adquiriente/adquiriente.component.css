@@ -1,0 +1,12 @@
+mat-card-header{
+  background-color: #337AB7;
+  color: #FFFFFF;
+}
+
+mat-card{
+  background-color: #F9F9F9;
+}
+
+mat-radio-group {
+  display: grid;
+}

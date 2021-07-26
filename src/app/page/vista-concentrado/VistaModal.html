@@ -1,0 +1,190 @@
+
+<h2 mat-dialog-title>Dictaminacion Cargo - Abono </h2>
+<mat-dialog-content class="mat-typography">
+
+	<table class="example-full-width" ><tr>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Llave de Registro:</mat-label>
+				<input matInput #postalCode maxlength="5" placeholder="Numero de Registro" >
+				<!-- <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint> -->
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field appearance="fill">
+				<mat-label>Fecha De Proceso:</mat-label>
+				<input matInput [matDatepicker]="picker">
+				<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+				<mat-datepicker #picker></mat-datepicker>
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>ID de la Transaccion:</mat-label>
+				<input matInput #postalCode maxlength="5" placeholder="Numero de Registro" >
+				<!-- <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint> -->
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Numero de Autoizacion:</mat-label>
+				<input matInput #postalCode maxlength="23" minlength="18"placeholder="Numero de Registro" >
+				<!-- <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint> -->
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field appearance="fill">
+				<mat-label>Fecha de Transaccion:</mat-label>
+				<input matInput [matDatepicker]="picker1">
+				<mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+				<mat-datepicker #picker1></mat-datepicker>
+			</mat-form-field>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Importe de la Transaccion:</mat-label>
+				<input matInput #postalCode maxlength="5" placeholder="Importe de la Transaccion" >
+				<!-- <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint> -->
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Hora de la Transaccion:</mat-label>
+				<input matInput #postalCode maxlength="23" minlength="18"placeholder="Hora de la Transaccion" >
+				<!-- <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint> -->
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Codigo de la Transaccion:</mat-label>
+				<input matInput #postalCode maxlength="23" minlength="18"placeholder="Codigo de la Transaccion" >
+				<!-- <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint> -->
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Tipo de plan:</mat-label>
+				<input matInput #postalCode maxlength="23" minlength="18"placeholder="Tipo de plan" >
+				<!-- <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint> -->
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Tipo moneda:</mat-label>
+				<input matInput #postalCode maxlength="23" minlength="18"placeholder="Tipo moneda" >
+				<!-- <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint> -->
+			</mat-form-field>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Codigo de parcializacion:</mat-label>
+				<input matInput #postalCode maxlength="5" placeholder="Codigo de parcializacion" >
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>ID de Giro:</mat-label>
+				<input matInput #postalCode maxlength="23" minlength="18"placeholder="ID de Giro" >
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Numero de Afiliacion:</mat-label>
+				<input matInput #postalCode maxlength="23" minlength="18"placeholder="Numero de Afiliacion" >
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Numero de Afiliacion AMEX:</mat-label>
+				<input matInput #postalCode maxlength="23" minlength="18"placeholder="Numero de Afiliacion AMEX" >
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Razon Social:</mat-label>
+				<input matInput #postalCode maxlength="23" minlength="18"placeholder="Razon Social" >
+
+			</mat-form-field>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Numero de calle:</mat-label>
+				<input matInput #postalCode maxlength="5" placeholder="Numero de calle" >
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Nombre de la Ciudad:</mat-label>
+				<input matInput #postalCode maxlength="23" minlength="18"placeholder="Nombre de la Ciudad" >
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Codigo del Estado:</mat-label>
+				<input matInput #postalCode maxlength="23" minlength="18"placeholder="Codigo del Estado" >
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Codigo del Pais:</mat-label>
+				<input matInput #postalCode maxlength="23" minlength="18"placeholder="Codigo del Pais" >
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Codigo Postal:</mat-label>
+				<input matInput #postalCode maxlength="23" minlength="18"placeholder="Codigo Postal" >
+			</mat-form-field>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>ID del Emisor:</mat-label>
+				<input matInput #postalCode maxlength="5" placeholder="ID del Emisor" >
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field appearance="fill">
+				<mat-label>Fecha de Transaccion:</mat-label>
+				<input matInput [matDatepicker]="picker2">
+				<mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+				<mat-datepicker #picker2></mat-datepicker>
+			</mat-form-field>
+
+			
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Id ultima modificacion:</mat-label>
+				<input matInput #postalCode maxlength="23" minlength="18"placeholder="Id ultima modificacion" >
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>ID del Adquirente:</mat-label>
+				<input matInput #postalCode maxlength="23" minlength="18"placeholder="ID del Adquirente" >
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Llave del Registro:</mat-label>
+				<input matInput #postalCode maxlength="23" minlength="18"placeholder="Llave del Registro" >
+			</mat-form-field>
+		</td>
+	</tr>
+</table>
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+	<button mat-raised-button color="warn" mat-dialog-close>Cancelar</button>
+	<button mat-raised-button color="primary" [mat-dialog-close]="true" cdkFocusInitial>Cargo Abono</button>
+		<button mat-raised-button color="primary" [mat-dialog-close]="true" cdkFocusInitial>Reinyectar</button>
+</mat-dialog-actions>

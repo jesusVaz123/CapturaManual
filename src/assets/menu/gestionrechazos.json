@@ -1,0 +1,30 @@
+{
+  "back": {
+    "label": "Rechazos Emisor Amex-OptBlue",
+    "path": "main",
+    "more": true
+  },
+  "title": "Gestión de Rechazos Emisor",
+  "menu": [
+    
+        {
+      "label": "Consolidado de Rechazos",
+      "path": "rechazos-lotes",
+      "more": false
+    },
+      {
+      "label": "Gestión de Rechazos Emisor",
+      "path": "confirmation-report",
+      "more": false
+    },
+    {
+      "label": "Gestión de Rechazos Nacional",
+      "path": "gestionrechazosnacional",
+      "more": true
+    }
+  
+  
+  
+  
+  ]
+}

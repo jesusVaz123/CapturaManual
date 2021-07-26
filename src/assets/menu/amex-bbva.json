@@ -1,0 +1,27 @@
+{
+  "back": {
+    "label": "Menú principal",
+    "path": "main",
+    "more": true
+  },
+  "title": "Amex OptBlue - BBVA",
+  "menu": [
+    
+    {
+      "label": "Reporte de Confirmacion",
+      "path": "confirmation-report",
+      "more": false
+    },
+     {
+      "label": "Reporte GRRCN",
+      "path": "reportegrrnc",
+      "more": true
+    },
+
+    {
+      "label": "Consolidado",
+      "path": "vista-concentrado",
+      "more": false
+    }
+  ]
+}

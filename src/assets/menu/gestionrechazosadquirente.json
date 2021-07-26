@@ -1,0 +1,19 @@
+{
+  "back": {
+    "label": "Rechazos Emisor Amex-OptBlue",
+    "path": "main",
+    "more": true
+  },
+  "title": "Gestión de Rechazos Adquirente",
+  "menu": [
+    
+        {
+      "label": "Gestión de Rechazos Adquirente",
+      "path": "rechazo-sintaxis",
+      "more": false
+    }
+     
+  
+  
+  ]
+}

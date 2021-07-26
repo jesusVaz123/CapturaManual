@@ -1,0 +1,407 @@
+<div class="example-container">
+
+
+</div>
+
+<div class="user-container">
+  <div class="container">
+    <br>
+    <h2 layout="row" layout-align="center center"> Detalles de Pagos</h2>
+	<table class="example-full-width" cellspacing="5" [formGroup]="DetallePago">
+		<tr>
+      <td>
+		  <mat-form-field appearance="fill">
+             <mat-label>Fecha Inicial</mat-label> 
+               <input matInput [matDatepicker]="picker"  [value]="fechaactual.value" formControlName="pvFechaProceso">
+               <mat-datepicker-toggle matSuffix [for]="picker" id = pvFechaProceso></mat-datepicker-toggle>
+               <mat-datepicker #picker></mat-datepicker>
+	      </mat-form-field>
+	  </td>
+      <td> 
+		  <mat-form-field appearance="fill">
+              <mat-label>Fecha Final</mat-label>
+              <input matInput [matDatepicker]="picker1" [value]="fechaactual.value" formControlName="fechaactual">
+              <mat-datepicker-toggle matSuffix [for]="picker1" id = pvFechaFinal></mat-datepicker-toggle>
+           <mat-datepicker #picker1></mat-datepicker>
+		  </mat-form-field>
+	   </td>
+     <td>
+        <mat-form-field appearance="fill">
+          <mat-label>Tipo Registro</mat-label>
+          <mat-select  formControlName="IdTipoRegistro" multiple>
+            <mat-option value="cadena"  *ngFor="let estatus of estatus" [value]="estatus.claveCatalogo">{{estatus.descripcionCatalogo}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+     </td>
+      <td> 
+   		 <ng-container matColumnDef="myColumn">
+     	 <button mat-raised-button color="primary" [disabled]="!DetallePago.valid" (click)="onSubmit()" >BUSCAR</button>
+    	 </ng-container>
+  		</td>
+       <td> 
+    <ng-container matColumnDef="myColumn">
+      <button mat-raised-button color="success" (click)="exportexcel()" >Descargar</button>
+    </ng-container>
+  </td>
+
+	</tr>
+</table>
+
+    <div class="mat-elevation-z8">
+      <mat-form-field class="filter">
+      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filtrar Campos">
+    </mat-form-field>
+      <table mat-table [dataSource]="dataDetallesPagos"  >
+         <ng-container matColumnDef="dtFechaCarga">
+          <th mat-header-cell *matHeaderCellDef> Fecha Carga</th>
+          <td mat-cell *matCellDef="let element"> {{element.dtFechaCarga | date:'yyyy-MM-dd'}} </td>
+        </ng-container>
+        <ng-container matColumnDef="pTipoRegistro">
+          <th mat-header-cell *matHeaderCellDef>Tipo Registro</th>
+          <td mat-cell *matCellDef="let element"> {{element.pTipoRegistro  }} </td>
+        </ng-container>
+        <ng-container matColumnDef="pCantidadCuotas">
+          <th mat-header-cell *matHeaderCellDef> Cantidad Cuotas</th>
+          <td mat-cell *matCellDef="let element"> {{element.pCantidadCuotas }} </td>
+        </ng-container>
+        <ng-container matColumnDef="pCodAprobacion">
+          <th mat-header-cell *matHeaderCellDef> Codigo Aprobación </th>
+          <td mat-cell *matCellDef="let element"> {{element.pCodAprobacion}} </td>
+        </ng-container>
+        <ng-container matColumnDef="pCodCatComercio">
+          <th mat-header-cell *matHeaderCellDef> Categoria Comercio</th>
+          <td mat-cell *matCellDef="let element"> {{element.pCodCatComercio}} </td>
+        </ng-container>
+        <ng-container matColumnDef="pCodMotivoAjuste">
+          <th mat-header-cell *matHeaderCellDef> Motivo Ajuste</th>
+          <td mat-cell *matCellDef="let element"> {{element.pCodMotivoAjuste}} </td>
+        </ng-container>
+        <ng-container matColumnDef="pCodMotivoContra">
+          <th mat-header-cell *matHeaderCellDef> Motivo Contracargo</th>
+          <td mat-cell *matCellDef="let element"> {{element.pCodMotivoContra}} </td>
+        </ng-container>
+        <ng-container matColumnDef="pCodTipoCuenta">
+          <th mat-header-cell *matHeaderCellDef> Tipo Cuenta</th>
+          <td mat-cell *matCellDef="let element"> {{element.pCodTipoCuenta}} </td>
+        </ng-container>
+        <ng-container matColumnDef="pCodigoBanco">
+          <th mat-header-cell *matHeaderCellDef> ID Banco</th>
+          <td mat-cell *matCellDef="let element"> {{element.pCodigoBanco}} </td>
+        </ng-container>
+        <ng-container matColumnDef="pCodigoCargo">
+          <th mat-header-cell *matHeaderCellDef> ID Cargo</th>
+          <td mat-cell *matCellDef="let element"> {{element.pCodigoCargo}} </td>
+        </ng-container>
+        <ng-container matColumnDef="pCodigoFactura">
+          <th mat-header-cell *matHeaderCellDef>ID Factura</th>
+          <td mat-cell *matCellDef="let element"> {{element.pCodigoFactura}} </td>
+        </ng-container>
+        <ng-container matColumnDef="pCodigoLote">
+          <th mat-header-cell *matHeaderCellDef>ID Lote</th>
+          <td mat-cell *matCellDef="let element"> {{element.pCodigoLote }} </td>
+        </ng-container>
+        <ng-container matColumnDef="pDescMotivoAjuste">
+          <th mat-header-cell *matHeaderCellDef>Descuento Ajuste</th>
+          <td mat-cell *matCellDef="let element"> {{element.pDescMotivoAjuste}} </td>
+        </ng-container>
+        <ng-container matColumnDef="pDescMotivoContra">
+          <th mat-header-cell *matHeaderCellDef>Descuento Contracargo</th>
+          <td mat-cell *matCellDef="let element"> {{element.pDescMotivoContra}} </td>
+        </ng-container>
+        <ng-container matColumnDef="pDiasAdelantados">
+          <th mat-header-cell *matHeaderCellDef>Dias Adelantados</th>
+          <td mat-cell *matCellDef="let element"> {{element.pDiasAdelantados }} </td>
+        </ng-container>
+        <ng-container matColumnDef="pEstatus">
+          <th mat-header-cell *matHeaderCellDef>Estatus</th>
+          <td mat-cell *matCellDef="let element"> {{element.pEstatus }} </td>
+        </ng-container>
+        <ng-container matColumnDef="pFecAceleracion">
+          <th mat-header-cell *matHeaderCellDef>Fecha Aceleración</th>
+          <td mat-cell *matCellDef="let element"> {{element.pFecAceleracion | date:'yyyy-MM-dd'}} </td>
+        </ng-container>
+        <ng-container matColumnDef="pFecEnvioComercial">
+          <th mat-header-cell *matHeaderCellDef>Fecha Envio Comercial</th>
+          <td mat-cell *matCellDef="let element"> {{element.pFecEnvioComercial }} </td>
+        </ng-container>
+        <ng-container matColumnDef="pFecLiquiOrig">
+          <th mat-header-cell *matHeaderCellDef>Fecha Liquidación</th>
+          <td mat-cell *matCellDef="let element"> {{element.pFecLiquiOrig | date:'yyyy-MM-dd'}} </td>
+        </ng-container>
+        <ng-container matColumnDef="pFecProcesaAmex">
+          <th mat-header-cell *matHeaderCellDef>Fecha Proceso Amex</th>
+          <td mat-cell *matCellDef="let element"> {{element.pFecProcesaAmex }} </td>
+        </ng-container>
+        <ng-container matColumnDef="pFechaCreacion">
+          <th mat-header-cell *matHeaderCellDef>Fecha Creación</th>
+          <td mat-cell *matCellDef="let element"> {{element.pFechaCreacion | date:'yyyy-MM-dd'}} </td>
+        </ng-container>
+        <ng-container matColumnDef="pFechaPago">
+          <th mat-header-cell *matHeaderCellDef>Fecha Pago</th>
+          <td mat-cell *matCellDef="let element"> {{element.pFechaPago }} </td>
+        </ng-container>
+        <ng-container matColumnDef="pFechaProceso">
+          <th mat-header-cell *matHeaderCellDef>Fecha Proceso</th>
+          <td mat-cell *matCellDef="let element"> {{element.pFechaProceso | date:'yyyy-MM-dd'}} </td>
+        </ng-container>
+        <ng-container matColumnDef="pFechaTransaccion">
+          <th mat-header-cell *matHeaderCellDef>Fecha Transacción</th>
+          <td mat-cell *matCellDef="let element"> {{element.pFechaTransaccion }} </td>
+        </ng-container>
+        <ng-container matColumnDef="pHoraCreacion">
+          <th mat-header-cell *matHeaderCellDef>Hora Transacción</th>
+          <td mat-cell *matCellDef="let element"> {{element.pHoraCreacion }} </td>
+        </ng-container>
+        <ng-container matColumnDef="pHoraTransaccion">
+          <th mat-header-cell *matHeaderCellDef>Hora Transacción</th>
+          <td mat-cell *matCellDef="let element"> {{element.pHoraTransaccion}} </td>
+        </ng-container>
+        <ng-container matColumnDef="pIdArchivo">
+          <th mat-header-cell *matHeaderCellDef>ID Archivo</th>
+          <td mat-cell *matCellDef="let element"> {{element.pIdArchivo}} </td>
+        </ng-container>
+        <ng-container matColumnDef="pIdComercio">
+          <th mat-header-cell *matHeaderCellDef>ID Comercio</th>
+          <td mat-cell *matCellDef="let element"> {{element.pIdComercio}} </td>
+        </ng-container>
+        <ng-container matColumnDef="pIdComercioPresentacion">
+          <th mat-header-cell *matHeaderCellDef>ID Comercio Presentación</th>
+          <td mat-cell *matCellDef="let element"> {{element.pIdComercioPresentacion}} </td>
+        </ng-container>
+        <ng-container matColumnDef="pIdSeguimiento">
+          <th mat-header-cell *matHeaderCellDef>ID Seguimiento</th>
+          <td mat-cell *matCellDef="let element"> {{element.pIdSeguimiento}} </td>
+        </ng-container>
+        <ng-container matColumnDef="pIdUbicacionComercio">
+          <th mat-header-cell *matHeaderCellDef>ID Ubicación</th>
+          <td mat-cell *matCellDef="let element"> {{element.pIdUbicacionComercio}} </td>
+        </ng-container>
+        <ng-container matColumnDef="pIndTransRecha">
+          <th mat-header-cell *matHeaderCellDef>ID Rechazado</th>
+          <td mat-cell *matCellDef="let element"> {{element.pIndTransRecha }} </td>
+        </ng-container>
+        <ng-container matColumnDef="pMonAceleracion">
+          <th mat-header-cell *matHeaderCellDef>Monto Aceleración</th>
+          <td mat-cell *matCellDef="let element"> {{element.pMonAceleracion | currency:"$"}} </td>
+        </ng-container>
+        <ng-container matColumnDef="pMonBrMonedaPago">
+          <th mat-header-cell *matHeaderCellDef>Monto Moneda Pago</th>
+          <td mat-cell *matCellDef="let element"> {{element.pMonBrMonedaPago| currency:"$"}} </td>
+        </ng-container>
+        <ng-container matColumnDef="pMonBrMonedaPres">
+          <th mat-header-cell *matHeaderCellDef>Monto Moneda Pres</th>
+          <td mat-cell *matCellDef="let element"> {{element.pMonBrMonedaPres| currency:"$"}} </td>
+        </ng-container>
+        <ng-container matColumnDef="pMonCargoAcelera">
+          <th mat-header-cell *matHeaderCellDef>Monto Cargo Aceleración</th>
+          <td mat-cell *matCellDef="let element"> {{element.pMonCargoAcelera| currency:"$"}} </td>
+        </ng-container>
+        <ng-container matColumnDef="pMonCargoServicio">
+          <th mat-header-cell *matHeaderCellDef>Monto Servicio</th>
+          <td mat-cell *matCellDef="let element"> {{element.pMonCargoServicio| currency:"$"}} </td>
+        </ng-container>
+    <!--     <ng-container matColumnDef="pMontoServicioDos">
+          <th mat-header-cell *matHeaderCellDef>Monto Servicio Dos</th>
+          <td mat-cell *matCellDef="let element"> {{element.pMontoServicioDos | currency:"$"}} </td>
+        </ng-container> -->
+        <ng-container matColumnDef="pMonDescPres">
+          <th mat-header-cell *matHeaderCellDef>Monto Descripción</th>
+          <td mat-cell *matCellDef="let element"> {{element.pMonDescPres | currency:"$"}} </td>
+        </ng-container>
+        <ng-container matColumnDef="pMonNetoCargoAcelera">
+          <th mat-header-cell *matHeaderCellDef>Monto Cargo Aceleración</th>
+          <td mat-cell *matCellDef="let element"> {{element.pMonNetoCargoAcelera | currency:"$"}} </td>
+        </ng-container>
+        <ng-container matColumnDef="pMonSaldoDebIni">
+          <th mat-header-cell *matHeaderCellDef>Monto Saldo Debito</th>
+          <td mat-cell *matCellDef="let element"> {{element.pMonSaldoDebIni | currency:"$"}} </td>
+        </ng-container>
+        <ng-container matColumnDef="pMoneda">
+          <th mat-header-cell *matHeaderCellDef>Moneda</th>
+          <td mat-cell *matCellDef="let element"> {{element.pMoneda }} </td>
+        </ng-container>
+        <ng-container matColumnDef="pMonedaPago">
+          <th mat-header-cell *matHeaderCellDef>Moneda Pago</th>
+          <td mat-cell *matCellDef="let element"> {{element.pMonedaPago  }} </td>
+        </ng-container>
+        <ng-container matColumnDef="pMontoAjuste">
+          <th mat-header-cell *matHeaderCellDef>Monto Ajuste</th>
+          <td mat-cell *matCellDef="let element"> {{element.pMontoAjuste }} </td>
+        </ng-container>
+        <ng-container matColumnDef="pMontoBruto">
+          <th mat-header-cell *matHeaderCellDef>Monto Bruto</th>
+          <td mat-cell *matCellDef="let element"> {{element.pMontoBruto | currency:"$"}} </td>
+        </ng-container>
+        <ng-container matColumnDef="pMontoBrutoCredito">
+          <th mat-header-cell *matHeaderCellDef>Monto Bruto Credito</th>
+          <td mat-cell *matCellDef="let element"> {{element.pMontoBrutoCredito | currency:"$" }} </td>
+        </ng-container>
+        <ng-container matColumnDef="pMontoBrutoDebito">
+          <th mat-header-cell *matHeaderCellDef>Monto Bruto Credito</th>
+          <td mat-cell *matCellDef="let element"> {{element.pMontoBrutoDebito | currency:"$" }} </td>
+        </ng-container>
+        <ng-container matColumnDef="pMontoBrutoPago">
+          <th mat-header-cell *matHeaderCellDef>Monto Bruto Pago</th>
+          <td mat-cell *matCellDef="let element"> {{element.pMontoBrutoPago | currency:"$" }} </td>
+        </ng-container>
+        <ng-container matColumnDef="pMontoCargo">
+          <th mat-header-cell *matHeaderCellDef>Monto Cargo</th>
+          <td mat-cell *matCellDef="let element"> {{element.pMontoCargo  }} </td>
+        </ng-container>
+        <ng-container matColumnDef="pMontoDescuento">
+          <th mat-header-cell *matHeaderCellDef>Monto Descuento</th>
+          <td mat-cell *matCellDef="let element"> {{element.pMontoDescuento | currency:"$" }} </td>
+        </ng-container>
+        <ng-container matColumnDef="pMontoDescuentoDos">
+          <th mat-header-cell *matHeaderCellDef>Monto Descuento 2</th>
+          <td mat-cell *matCellDef="let element"> {{element.pMontoDescuentoDos | currency:"$" }} </td>
+        </ng-container>
+        <ng-container matColumnDef="pMontoImpuesto">
+          <th mat-header-cell *matHeaderCellDef>Monto Impuesto</th>
+          <td mat-cell *matCellDef="let element"> {{element.pMontoImpuesto | currency:"$" }} </td>
+        </ng-container>
+        <ng-container matColumnDef="pMontoImpuestoDos">
+          <th mat-header-cell *matHeaderCellDef>Monto Impuesto 2</th>
+          <td mat-cell *matCellDef="let element"> {{element.pMontoImpuestoDos | currency:"$" }} </td>
+        </ng-container>
+        <ng-container matColumnDef="pMontoImpuestos">
+          <th mat-header-cell *matHeaderCellDef>Monto Impuestos </th>
+          <td mat-cell *matCellDef="let element"> {{element.pMontoImpuestos | currency:"$" }} </td>
+        </ng-container>
+        <ng-container matColumnDef="pMontoNeto">
+          <th mat-header-cell *matHeaderCellDef>Monto Neto </th>
+          <td mat-cell *matCellDef="let element"> {{element.pMontoNeto | currency:"$" }} </td>
+        </ng-container>
+        <ng-container matColumnDef="pMontoNetoDOs">
+          <th mat-header-cell *matHeaderCellDef>Monto Neto 2</th>
+          <td mat-cell *matCellDef="let element"> {{element.pMontoNetoDOs | currency:"$" }} </td>
+        </ng-container>
+        <ng-container matColumnDef="pMontoNetoPago">
+          <th mat-header-cell *matHeaderCellDef>Monto Neto Pago </th>
+          <td mat-cell *matCellDef="let element"> {{element.pMontoNetoPago | currency:"$" }} </td>
+        </ng-container>
+        <ng-container matColumnDef="pMontoServicio">
+          <th mat-header-cell *matHeaderCellDef>Monto  Servicio </th>
+          <td mat-cell *matCellDef="let element"> {{element.pMontoServicio | currency:"$" }} </td>
+        </ng-container>
+        <ng-container matColumnDef="pMontoServicioDos">
+          <th mat-header-cell *matHeaderCellDef>Monto Servicio 2 </th>
+          <td mat-cell *matCellDef="let element"> {{element.pMontoServicioDos | currency:"$" }} </td>
+        </ng-container>
+        <ng-container matColumnDef="pMontoTransaccion">
+          <th mat-header-cell *matHeaderCellDef>Monto Transaccion </th>
+          <td mat-cell *matCellDef="let element"> {{element.pMontoTransaccion | currency:"$" }} </td>
+        </ng-container>
+        <ng-container matColumnDef="pNombreArchivo">
+          <th mat-header-cell *matHeaderCellDef>Nombre Servicio </th>
+          <td mat-cell *matCellDef="let element"> {{element.pNombreArchivo  }} </td>
+        </ng-container>
+        <ng-container matColumnDef="pNumAceleracion">
+          <th mat-header-cell *matHeaderCellDef>Número Acelerecación </th>
+          <td mat-cell *matCellDef="let element"> {{element.pNumAceleracion  }} </td>
+        </ng-container>
+        <ng-container matColumnDef="pNumAjuste">
+          <th mat-header-cell *matHeaderCellDef>Número Ajuste </th>
+          <td mat-cell *matCellDef="let element"> {{element.pNumAjuste  }} </td>
+        </ng-container>
+        <ng-container matColumnDef="pNumFactura">
+          <th mat-header-cell *matHeaderCellDef>Número Factura </th>
+          <td mat-cell *matCellDef="let element"> {{element.pNumFactura  }} </td>
+        </ng-container>
+        <ng-container matColumnDef="pNumPagoAmex">
+          <th mat-header-cell *matHeaderCellDef>Pago Amex </th>
+          <td mat-cell *matCellDef="let element"> {{element.pNumPagoAmex | currency:"$" }} </td>
+        </ng-container>
+        <ng-container matColumnDef="pNumRefAdq">
+          <th mat-header-cell *matHeaderCellDef>Referencia Adquirente </th>
+          <td mat-cell *matCellDef="let element"> {{element.pNumRefAdq  }} </td>
+        </ng-container>
+        <ng-container matColumnDef="pNumRefSocio">
+          <th mat-header-cell *matHeaderCellDef>Referencia Socio </th>
+          <td mat-cell *matCellDef="let element"> {{element.pNumRefSocio  }} </td>
+        </ng-container>
+        <ng-container matColumnDef="pNumReferencia">
+          <th mat-header-cell *matHeaderCellDef>Número Referencia </th>
+          <td mat-cell *matCellDef="let element"> {{element.pNumReferencia  }} </td>
+        </ng-container>
+        <ng-container matColumnDef="pNumSecuencial">
+          <th mat-header-cell *matHeaderCellDef>Número Secuencial </th>
+          <td mat-cell *matCellDef="let element"> {{element.pNumSecuencial  }} </td>
+        </ng-container>
+        <ng-container matColumnDef="pNumTarjeta">
+          <th mat-header-cell *matHeaderCellDef>Número Tarjeta </th>
+          <td mat-cell *matCellDef="let element"> {{element.pNumTarjeta  }} </td>
+        </ng-container>
+        <ng-container matColumnDef="pNumTerminal">
+          <th mat-header-cell *matHeaderCellDef>Número Terminal </th>
+          <td mat-cell *matCellDef="let element"> {{element.pNumTerminal  }} </td>
+        </ng-container>
+        <ng-container matColumnDef="pNumTransaccion">
+          <th mat-header-cell *matHeaderCellDef>Número Transaccion </th>
+          <td mat-cell *matCellDef="let element"> {{element.pNumTransaccion  }} </td>
+        </ng-container>
+        <ng-container matColumnDef="pNumVendedor">
+          <th mat-header-cell *matHeaderCellDef>Número Vendedor </th>
+          <td mat-cell *matCellDef="let element"> {{element.pNumVendedor  }} </td>
+        </ng-container>
+         <ng-container matColumnDef="pNumeroCuota">
+          <th mat-header-cell *matHeaderCellDef>Número Cuota </th>
+          <td mat-cell *matCellDef="let element"> {{element.pNumeroCuota  }} </td>
+        </ng-container>
+        <ng-container matColumnDef="pSumTotalReg">
+          <th mat-header-cell *matHeaderCellDef>Suma Total </th>
+          <td mat-cell *matCellDef="let element"> {{element.pSumTotalReg  }} </td>
+        </ng-container>
+        <ng-container matColumnDef="pSumaTrans">
+          <th mat-header-cell *matHeaderCellDef>Suma Transaccion</th>
+          <td mat-cell *matCellDef="let element"> {{element.pSumaTrans  }} </td>
+        </ng-container>
+        <ng-container matColumnDef="pTasaCambio">
+          <th mat-header-cell *matHeaderCellDef>Tasa Cambio </th>
+          <td mat-cell *matCellDef="let element"> {{element.pTasaCambio  }} </td>
+        </ng-container>
+        <ng-container matColumnDef="pTasaDescuento">
+          <th mat-header-cell *matHeaderCellDef>Tasa Descuento </th>
+          <td mat-cell *matCellDef="let element"> {{element.pTasaDescuento  }} </td>
+        </ng-container>
+        <ng-container matColumnDef="pTasaDescuentoDos">
+          <th mat-header-cell *matHeaderCellDef>Tasa Descuento 2 </th>
+          <td mat-cell *matCellDef="let element"> {{element.pTasaDescuentoDos  }} </td>
+        </ng-container>
+        <ng-container matColumnDef="pTasaImpuesto">
+          <th mat-header-cell *matHeaderCellDef>Tasa Impuesto </th>
+          <td mat-cell *matCellDef="let element"> {{element.pTasaImpuesto  }} </td>
+        </ng-container>
+        
+        <ng-container matColumnDef="pTipoRegistroDos">
+          <th mat-header-cell *matHeaderCellDef>Tipo Registro 2 </th>
+          <td mat-cell *matCellDef="let element"> {{element.pTipoRegistroDos  }} </td>
+        </ng-container>
+        <ng-container matColumnDef="pVersionArchivo">
+          <th mat-header-cell *matHeaderCellDef>Versión Archivo </th>
+          <td mat-cell *matCellDef="let element"> {{element.pVersionArchivo  }} </td>
+        </ng-container>
+        <ng-container matColumnDef="pvFirstInstallAmount">
+          <th mat-header-cell *matHeaderCellDef>Primer Monto Instalado</th>
+          <td mat-cell *matCellDef="let element"> {{element.pvFirstInstallAmount | currency:"$" }} </td>
+        </ng-container>
+        <ng-container matColumnDef="pvSubInstallAmount">
+          <th mat-header-cell *matHeaderCellDef>Sub Monto Instalado </th>
+          <td mat-cell *matCellDef="let element"> {{element.pvSubInstallAmount | currency:"$" }} </td>
+        </ng-container>
+        
+
+      
+        
+
+
+
+
+
+
+  <tr mat-header-row *matHeaderRowDef="detpagoColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: detpagoColumns;"></tr>
+</table>
+
+<mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>

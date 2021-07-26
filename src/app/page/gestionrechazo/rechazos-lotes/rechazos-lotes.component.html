@@ -1,0 +1,111 @@
+  <div class="example-container">
+  </div>
+  <div class="user-container">
+    <div class="container">
+      <h2 layout="row" layout-align="center center"> Consolidado de Rechazos</h2>
+      <table class="example-full-width" [formGroup]="Confirmation">
+        <div class="row">
+        <td>
+          <mat-form-field appearance="fill" style="width:11vw">
+            <mat-label>Fecha Inicial</mat-label> 
+            <input matInput [matDatepicker]="picker"  [value]="fechaactual.value" formControlName = "fechaIni">
+             <!-- <mat-error *ngIf="checkError('fechaIni', 'required')">Fecha Requerida</mat-error> -->
+            <mat-datepicker-toggle matSuffix [for]="picker" id= fechaIni></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field appearance="fill" style="width:11vw">
+            <mat-label>Fecha Final</mat-label>
+            <input matInput [matDatepicker]="picker1"  [value]="fechaactual.value" formControlName="fechaFin">
+            <!-- <mat-error *ngIf="checkError('fechaFin', 'required')">Fecha Requerida</mat-error> -->
+            <mat-datepicker-toggle matSuffix [for]="picker1" id= fechaFin></mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+          </mat-form-field>
+        </td>
+
+        <td>
+          <mat-form-field appearance="fill" style="width:11vw">
+            <mat-label>Tipo Registro</mat-label>
+            <mat-select  formControlName="tipoRegistro" multiple >
+             <!--  <mat-error *ngIf="checkError('tipoRegistro', 'required')">Tipo Registro Requerido</mat-error> -->
+              <mat-option value="cadena"  *ngFor="let tipoRegistro of tipoRegistro" [value]="tipoRegistro.claveCatalogo">{{tipoRegistro.descripcionCatalogo}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </td>
+         <td >
+          <mat-form-field appearance="fill" style="width:11vw" >
+            <mat-label>Fecha Estatus</mat-label>
+            <input matInput [matDatepicker]="picker2"  >
+            <mat-datepicker-toggle matSuffix [for]="picker2" ></mat-datepicker-toggle>
+            <mat-datepicker #picker2></mat-datepicker>
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field appearance="fill" style="width:11vw">
+            <mat-label>Estatus</mat-label>
+            <mat-select  formControlName="estatus" multiple >
+              <!-- <mat-error *ngIf="checkError('estatus', 'required')">Estatus Requerido</mat-error> -->
+              <mat-option value="cadena"  *ngFor="let estatus of estatus" [value]="estatus.claveCatalogo">{{estatus.descripcionCatalogo}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </td>
+        
+      <td> 
+        <ng-container matColumnDef="myColumn">
+          <button mat-raised-button color="primary" [disabled]="!Confirmation.valid" (click)="onSubmit()" >BUSCAR</button>
+        </ng-container>
+      </td>
+      <td> 
+        <ng-container matColumnDef="myColumn">
+          <button mat-raised-button color="success"  [disabled]="!Confirmation.valid" (click)="exportexcel()" >Descargar</button>
+        </ng-container>
+      </td>
+     </div>
+  </table>
+
+  <div class="mat-elevation-z8">
+    <mat-form-field class="filter">
+      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filtros Avanzados">
+    </mat-form-field>
+    <table mat-table [dataSource]="dataSource" id="confirmation">
+
+
+      <ng-container matColumnDef="vRecordType">
+        <th mat-header-cell *matHeaderCellDef> Tipo de Registro</th>
+        <td mat-cell *matCellDef="let element">  {{element.vRecordType}} </td>
+      </ng-container>
+      <ng-container matColumnDef="iErrorCode">
+        <th mat-header-cell *matHeaderCellDef> Código de error </th>
+        <td mat-cell *matCellDef="let element" >  {{element.iErrorCode}} </td>
+      </ng-container>
+      <ng-container matColumnDef="vCodDesc">
+        <th mat-header-cell *matHeaderCellDef>  Descripcion del Código </th>
+        <td mat-cell *matCellDef="let element" >  {{element.vCodDesc}} </td>
+      </ng-container>
+      <ng-container matColumnDef="totalRegistros">
+        <th mat-header-cell *matHeaderCellDef>  Total de Registros </th>
+        <td mat-cell *matCellDef="let element">  {{element.totalRegistros}}</td>
+      </ng-container> 
+      <ng-container matColumnDef="totalImporte">
+        <th mat-header-cell *matHeaderCellDef>  Importe Total </th>
+        <td mat-cell *matCellDef="let element">  ${{element.totalImporte}}</td>
+      </ng-container>
+      <ng-container matColumnDef="vStatusNombre">
+        <th mat-header-cell *matHeaderCellDef> Estatus </th>
+        <td mat-cell *matCellDef="let element"> {{element.vStatusNombre}} </td>
+      </ng-container>
+    <!--   <ng-container matColumnDef="myColumn">
+        <th mat-header-cell *matHeaderCellDef> Accion </th>
+        <td mat-cell *matCellDef="let element" >
+         
+           <a routerLink="/confirmation-report/20210420/20210420/REJ/2009/RC">Detalles</a>
+        
+        </td>
+      </ng-container> -->
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+  </div>

@@ -1,0 +1,9 @@
+<mat-drawer-container class="container-main">
+  <mat-drawer #drawer mode="side" opened class="primary">
+    <app-side-bar (change)="drawer.toggle();selectAcquirer();"></app-side-bar>
+  </mat-drawer>
+  <mat-drawer-content>
+    <div class="container"><router-outlet></router-outlet></div>
+    <app-footer textcopy='© Copyright Enero 2021. Linea de Integración para solución de Controversias E-global' application='Linsce V.1.0.0 '></app-footer>
+  </mat-drawer-content>
+</mat-drawer-container>

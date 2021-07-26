@@ -1,0 +1,114 @@
+
+<div class="user-container">
+  <div class="container">
+    <h2 layout="row" layout-align="center center">Carga Emisor Nacional</h2>
+
+    <table class="example-full-width" [formGroup]="Rechazo">
+      <tr>
+        <td>
+          <mat-form-field appearance="fill">
+            <mat-label>Fecha Inicial</mat-label>
+            <input matInput [matDatepicker]="picker" [value]="fechaactual.value" formControlName="pvFechaIni">
+            <mat-datepicker-toggle matSuffix [for]="picker" id=pvFechaIni></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field appearance="fill">
+            <mat-label>Fecha Final</mat-label>
+            <input matInput [matDatepicker]="picker1" [value]="fechaactual.value" formControlName="pvFechaFin">
+            <mat-datepicker-toggle matSuffix [for]="picker1" id=pvFechaFin></mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field appearance="fill">
+            <mat-label>Estatus</mat-label>
+            <mat-select  formControlName="pvCodTransaccion" multiple >
+              <mat-option value="1">Sin modificaciones</mat-option>
+              <mat-option value="2">Aprobado por el usuario</mat-option>
+              <mat-option value="3">Modificado</mat-option>
+              <mat-option value="4">Reinyectado</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </td>
+   
+        <td>
+          <ng-container matColumnDef="myColumn">
+            <button mat-raised-button color="primary" (click)="onSubmit()" >BUSCAR</button>
+          </ng-container>
+        </td>
+        <td>
+          <ng-container matColumnDef="myColumn">
+            <button mat-raised-button color="success"  (click)="exportexcel()"  >Descargar</button>
+          </ng-container>
+        </td>
+        
+     
+      </tr>
+    </table>
+
+    <div class="mat-elevation-z8">
+      <mat-form-field class="filter">
+        <input matInput placeholder="Filtrar Campos">
+      </mat-form-field>
+      <table mat-table [dataSource]="dataEmisorNacional" id="rechazosintaxis">
+        <ng-container matColumnDef="modificar">
+          <th mat-header-cell *matHeaderCellDef> Accion </th>
+          <td mat-cell *matCellDef="let element">
+            <button mat-raised-button color="primary" (click)="openOpciones()" >Modificar</button>
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="fechaLote">
+          <th mat-header-cell *matHeaderCellDef> fecha_lote</th>
+          <td mat-cell *matCellDef="let element"> {{element.fecha_lote}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="vTipo">
+          <th mat-header-cell *matHeaderCellDef> vTipoTxn</th>
+          <td mat-cell *matCellDef="let element"> {{element.vTipoTxn}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="mImp">
+          <th mat-header-cell *matHeaderCellDef> mImpTxn</th>
+          <td mat-cell *matCellDef="let element"> {{element.mImpTxn}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="vNumReferencia">
+          <th mat-header-cell *matHeaderCellDef> vNumRef</th>
+          <td mat-cell *matCellDef="let element"> {{element.vNumRef}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="ClaveMoneda">
+          <th mat-header-cell *matHeaderCellDef> iClaveMoneda </th>
+          <td mat-cell *matCellDef="let element"> {{element.iClaveMoneda}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="iImp">
+          <th mat-header-cell *matHeaderCellDef> iImpTasa</th>
+          <td mat-cell *matCellDef="let element"> {{element.iImpTasa}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="pobNegocio">
+          <th mat-header-cell *matHeaderCellDef> pob_negocio</th>
+          <td mat-cell *matCellDef="let element"> {{element.pob_negocio}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="codPais">
+          <th mat-header-cell *matHeaderCellDef> cod_pais_neg</th>
+          <td mat-cell *matCellDef="let element"> {{element.cod_pais_neg}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="codCatategoria">
+          <th mat-header-cell *matHeaderCellDef> cod_cat_neg</th>
+          <td mat-cell *matCellDef="let element"> {{element.cod_cat_neg}} </td>
+        </ng-container>
+
+
+        <tr mat-header-row *matHeaderRowDef="emisorNacionalCol"></tr>
+        <tr mat-row *matRowDef="let row; columns: emisorNacionalCol;"></tr>
+      </table>
+
+      <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+    </div>

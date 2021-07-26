@@ -1,0 +1,95 @@
+{
+  "back": {
+    "label": "Recuperación de pagarés",
+    "path": "recuperacionPagares",
+    "more": true
+  },
+  "title": "Procesos",
+  "menu": [
+    {
+      "label": "Generar entregas",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Fichas de cargo",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Cartas al Comercio",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Cartas de irregularidad",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Asigna estatus de irregularidad",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Facturación a Proveedor",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Cartas Corporativos Especiales",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Recuperación de documentos",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Confirmaciones CMP",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Reenvío masivo CMP",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Actualización masiva de cargos a negocios",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Interfase al log",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Renombrar imágenes",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Check list ",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Actualización",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Actualización cíclicos dólares",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Reenvío de cargos cíclicos",
+      "path": "",
+      "more": false
+    }
+  ]
+}

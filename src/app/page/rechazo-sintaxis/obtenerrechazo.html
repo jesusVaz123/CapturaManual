@@ -1,0 +1,314 @@
+
+<h2 mat-dialog-title> Detalle Rechazo</h2>
+<mat-dialog-content class="mat-typography">
+
+	<table class="example-full-width"><tr>
+		<td >
+			<mat-form-field class="example-full-width">
+				<mat-label>Fecha Proceso:</mat-label>
+				<input matInput  [(ngModel)]= "data.detalleRechazo.dtFechaProceso" disabled="disabled">
+				
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Tipo Registro:</mat-label>
+				<input matInput placeholder="D" [(ngModel)]="data.detalleRechazo.vTipoReg" disabled="disabled" >
+				
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Ctro Registro:</mat-label>
+				<input matInput   placeholder="0" [(ngModel)]="data.detalleRechazo.vCtroReg" disabled="disabled" >
+				
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Numero Afiliacion:</mat-label>
+				<input matInput  placeholder="6779425" [(ngModel)]="data.detalleRechazo.vNoAfiliacion"  >
+				
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Id Terminal:</mat-label>
+				<input matInput  placeholder="75" [(ngModel)]="data.detalleRechazo.vIdTerminal" disabled="disabled" >
+				
+			</mat-form-field>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Codigo TXN:</mat-label>
+				<input matInput  placeholder="11" [(ngModel)]="data.detalleRechazo.vCodTra" disabled="disabled" >
+				
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Modo de entrada de posicion:</mat-label>
+				<input matInput  placeholder="2" [(ngModel)]="data.detalleRechazo.vPosEntryMode" disabled="disabled" >
+				
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Numero de Autorizacion:</mat-label>
+				<input matInput  placeholder="003532" [(ngModel)]="data.detalleRechazo.vNumAutoriza"  >
+				
+			</mat-form-field>
+		</td>
+	
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Termino del lote Num:</mat-label>
+				<input matInput  placeholder="0" [(ngModel)]="data.detalleRechazo.vNumBatchterm" disabled="disabled" >
+				
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Num Txn Termino:</mat-label>
+				<input matInput  placeholder="11011" [(ngModel)]="data.detalleRechazo.vNumTxnTerm"  >
+				
+			</mat-form-field>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Codigo Emisor:</mat-label>
+				<input matInput  placeholder="A1" [(ngModel)]="data.detalleRechazo.vCodEmi" disabled="disabled" >
+				
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>No. Plastico:</mat-label>
+				<input matInput  placeholder="376620232369570" [(ngModel)]="data.detalleRechazo.vNoPlastico"  >
+				
+			</mat-form-field>
+		</td>
+	
+	
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Fecha Expira:</mat-label>
+				<input matInput  placeholder="00" [(ngModel)]="data.detalleRechazo.vFeExpira" disabled="disabled" >
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Importe de la TXN:</mat-label>
+				<input matInput   [(ngModel)]="data.detalleRechazo.mImpTxn"  >
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Fecha TXN:</mat-label>        
+				<input matInput  placeholder="301209" [(ngModel)]="data.detalleRechazo.vFeTxn" disabled="disabled" >
+			</mat-form-field>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Hora TXN:</mat-label>
+				<input matInput  placeholder="90338 " [(ngModel)]="data.detalleRechazo.vHorTtxn" disabled="disabled" >
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Fecha Captura:</mat-label>
+				<input matInput  placeholder="1209" [(ngModel)]="data.detalleRechazo.vFeCaptura" disabled="disabled" >
+
+			</mat-form-field>
+		</td>
+	
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Codigo Inst:</mat-label>
+				<input matInput  placeholder="36" [(ngModel)]="data.detalleRechazo.vInstCode" disabled="disabled" >
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Servidor de estado:</mat-label>
+				<input matInput  placeholder="0 " [(ngModel)]="data.detalleRechazo.vStatusServer" disabled="disabled" >
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Monto Retirado:</mat-label>
+				<input matInput  placeholder="0 " [(ngModel)]="data.detalleRechazo.mMontoRet"  >
+			</mat-form-field>
+		</td>
+	</tr>
+	<tr>
+		
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>IndRedCel:</mat-label>
+				<input matInput  placeholder="0" [(ngModel)]="data.detalleRechazo.vIndRedCel" disabled="disabled" >
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Arqc:</mat-label>
+				<input matInput  placeholder="25EF1DBED2AABEC7" [(ngModel)]="data.detalleRechazo.vArqc" disabled="disabled" >
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>VRRN:</mat-label>
+				<input matInput  placeholder="nO4d5F0Djq88 " [(ngModel)]="data.detalleRechazo.vRrn" disabled="disabled" >
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>TrmlCapability:</mat-label>
+				<input matInput  placeholder="4 " [(ngModel)]="data.detalleRechazo.vTrmlCapability " disabled="disabled" >
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Codigo de Servicio:</mat-label>
+				<input matInput  placeholder="A " [(ngModel)]="data.detalleRechazo.vCodServicio" disabled="disabled" >
+			</mat-form-field>
+		</td>
+		</tr>
+	<tr>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Registro de Llave:</mat-label>
+				<input matInput  placeholder="91000000346991 " [(ngModel)]="data.detalleRechazo.vRegLlave" disabled="disabled" >
+			</mat-form-field>
+		</td>
+	
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>No de Lote:</mat-label>
+				<input matInput  placeholder="1" [(ngModel)]="data.detalleRechazo.iNoLote" disabled="disabled" >
+			</mat-form-field>
+		</td>
+	<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Codigo de Error :</mat-label>
+				<input matInput  placeholder=" 0" [(ngModel)]="data.detalleRechazo.vCodErr" disabled="disabled" >
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Id Emisor:</mat-label>
+				<input matInput  placeholder="99 " [(ngModel)]="data.detalleRechazo.vIdEmi" disabled="disabled" >
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Id Adquirente:</mat-label>
+				<input matInput  placeholder=" 12" [(ngModel)]="data.detalleRechazo.vIdAdq" disabled="disabled" >
+			</mat-form-field>
+		</td>
+	
+	</tr>
+	<tr>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Codigo de Riesgo:</mat-label>
+				<input matInput  placeholder="0 " [(ngModel)]="data.detalleRechazo.vCodRiesgo" disabled="disabled" >
+			</mat-form-field>
+		</td>
+	
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>No de Referencia:</mat-label>
+				<input matInput  placeholder="7.99999803448677E+22" [(ngModel)]="data.detalleRechazo.vNumRef"  >
+			</mat-form-field>
+		</td>
+	<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Estatus Flujo :</mat-label>
+				<input matInput  placeholder=" 2" [(ngModel)]="data.detalleRechazo.vStatusFlujo" disabled="disabled" >
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Plataforma:</mat-label>
+				<input matInput  placeholder="AO " [(ngModel)]="data.detalleRechazo.vPlataforma" disabled="disabled" >
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Dif Promo:</mat-label>
+				<input matInput  placeholder=" 0" [(ngModel)]="data.detalleRechazo.vDifPromo" disabled="disabled" >
+			</mat-form-field>
+		</td>
+	
+	</tr>
+	<tr>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Parcialización:</mat-label>
+				<input matInput  placeholder="0 " [(ngModel)]="data.detalleRechazo.vParcializ" disabled="disabled" >
+			</mat-form-field>
+		</td>
+	
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Tipo Plan:</mat-label>
+				<input matInput  placeholder="0" [(ngModel)]="data.detalleRechazo.vTipPlan" disabled="disabled" >
+			</mat-form-field>
+		</td>
+	<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Folio Eglobal :</mat-label>
+				<input matInput  placeholder=" 6" [(ngModel)]="data.detalleRechazo.vFolioEgl" disabled="disabled" >
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Comple Aut:</mat-label>
+				<input matInput  placeholder="O " [(ngModel)]="data.detalleRechazo.vCompleAut" disabled="disabled" >
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Id Bonus:</mat-label>
+				<input matInput  placeholder="N" [(ngModel)]="data.detalleRechazo.vIdBonus" disabled="disabled" >
+			</mat-form-field>
+		</td>
+	
+	</tr>
+	<tr>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>No Serie Terminal:</mat-label>
+				<input matInput   [(ngModel)]="data.detalleRechazo.vNoSerieTerminal" disabled="disabled" >
+			</mat-form-field>
+		</td>
+	
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Estatus:</mat-label>
+				<input matInput   [(ngModel)]="data.detalleRechazo.vEstatus" disabled="disabled" >
+			</mat-form-field>
+		</td>
+	<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Número de Lote:</mat-label>
+				<input matInput   [(ngModel)]="data.detalleRechazo.iNoLote"  >
+			</mat-form-field>
+		</td>
+	
+	</tr>
+</table>
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+	<button mat-raised-button color="warn" mat-dialog-close>CERRAR</button>
+	<button mat-raised-button color="primary" (click)="valida(data)" mat-dialog-close>Actualizar</button>
+	
+</mat-dialog-actions>

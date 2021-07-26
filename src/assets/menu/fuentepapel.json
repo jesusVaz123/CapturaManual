@@ -1,0 +1,19 @@
+{
+  "back": {
+    "label": "Rechazos Emisor Amex-OptBlue",
+    "path": "main",
+    "more": true
+  },
+  "title": "Fuente Papel Rechazos",
+  "menu": [
+    
+        {
+      "label": "Rechazos Banorte",
+      "path": "rechazos-banorte",
+      "more": false
+    }
+  
+  
+  
+  ]
+}

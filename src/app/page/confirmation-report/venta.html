@@ -1,0 +1,1076 @@
+<h2 mat-dialog-title >DETALLE DEL RECHAZO <input matInput [(ngModel)]="data.DetalleV.vCodDesc" readonly> </h2>
+<mat-tab-group mat-stretch-tabs class="example-stretched-tabs mat-elevation-z4">
+  <mat-tab label="DETALLE VENTA "> 
+<mat-dialog-content class="mat-typography">
+	
+	<table class="example-full-width" id="prueba" ><tr>
+		<td >
+			<mat-form-field class="example-full-width">
+				<mat-label>Llave de Registro:</mat-label>
+				<input matInput [(ngModel)]= "data.DetalleV.vRegLlave" readonly>
+				
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Fecha Proceso:</mat-label>
+				<input matInput placeholder="2021-04-06 00:00:00.0" [(ngModel)]="data.DetalleV.dtFechaProceso"  readonly>
+				
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>ID de la Transaccion:</mat-label>
+				<input matInput   placeholder="000000000000001" [(ngModel)]="data.DetalleV.vTransId"  readonly>
+				
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Numero de Autoizacion:</mat-label>
+				<input matInput  placeholder="000001" [(ngModel)]="data.DetalleV.vNumAutoriza"  readonly>
+				
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Numero de Plastico:</mat-label>
+				<input matInput  placeholder="Numero de Pl�stico" [(ngModel)]="data.DetalleV.vNoPlastico" readonly >
+				
+			</mat-form-field>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Fecha de TXN:</mat-label>
+				<input matInput  placeholder="210211" [(ngModel)]="data.DetalleV.vFechaTxn"  readonly>
+				
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Importe de la TXN:</mat-label>
+				<input matInput  placeholder="400.01" [(ngModel)]="data.DetalleV.mImporteTxn"  readonly>
+				
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Hora de la TXN:</mat-label>
+				<input matInput  placeholder="003532" [(ngModel)]="data.DetalleV.vHoraTxn"  readonly>
+				
+			</mat-form-field>
+		</td>
+	
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Codigo de la Transaccion:</mat-label>
+				<input matInput  placeholder="05" [(ngModel)]="data.DetalleV.vCodTra"  readonly>
+				
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Tipo de plan:</mat-label>
+				<input matInput  placeholder="00" [(ngModel)]="data.DetalleV.vTipoPlan"  readonly>
+				
+			</mat-form-field>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Codigo de proceso:</mat-label>
+				<input matInput  placeholder="000000" [(ngModel)]="data.DetalleV.vProcCode"  readonly>
+				
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Tipo moneda:</mat-label>
+				<input matInput  placeholder="484" [(ngModel)]="data.DetalleV.vTipoMoneda"  readonly>
+				
+			</mat-form-field>
+		</td>
+	
+	
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Codigo de parcializacion:</mat-label>
+				<input matInput  placeholder="00" [(ngModel)]="data.DetalleV.vParcializacion"  readonly>
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>ID de Giro:</mat-label>
+				<input matInput  placeholder="ID de Giro" [(ngModel)]="data.DetalleV.vIdGiro" readonly >
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Numero de Afiliacion:</mat-label>        
+				<input matInput  placeholder="0000001" [(ngModel)]="data.DetalleV.vNoAfiliacion" readonly >
+			</mat-form-field>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Numero de Afiliacion AMEX:</mat-label>
+				<input matInput  placeholder="0024794 " [(ngModel)]="data.DetalleV.vNoAfiliacionAmex"  readonly>
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Razon Social:</mat-label>
+				<input matInput  placeholder="AGEN LLANTERA T BORUND" [(ngModel)]="data.DetalleV.vRazonSocial" readonly >
+
+			</mat-form-field>
+		</td>
+	
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Numero de calle:</mat-label>
+				<input matInput  placeholder="AV TEOFILO BORUNDA NO 402" [(ngModel)]="data.DetalleV.vCalleNo" readonly >
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Nombre de la Ciudad:</mat-label>
+				<input matInput  placeholder="CHIHUAHUA CHI" [(ngModel)]="data.DetalleV.vCiudad"  readonly>
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Codigo del Estado:</mat-label>
+				<input matInput  placeholder="CH " [(ngModel)]="data.DetalleV.vCodEstado "  readonly>
+			</mat-form-field>
+		</td>
+	</tr>
+	<tr>
+		
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Codigo del Pais:</mat-label>
+				<input matInput  placeholder="484" [(ngModel)]="data.DetalleV.vCodPaisBr"  readonly>
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Codigo Postal:</mat-label>
+				<input matInput  placeholder="31000" [(ngModel)]="data.DetalleV.vCodPostal"  readonly>
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Pos Data:</mat-label>
+				<input matInput  placeholder="51110150030C " [(ngModel)]="data.DetalleV.vPosData.DetalleV"  readonly>
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>ID del Emisor:</mat-label>
+				<input matInput  placeholder="98 " [(ngModel)]="data.DetalleV.vEmisor"  readonly>
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>ID del Adquirente:</mat-label>
+				<input matInput  placeholder="12 " [(ngModel)]="data.DetalleV.vAdquirente"  readonly>
+			</mat-form-field>
+		</td>
+		</tr>
+	<tr>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Id ultima modificacion:</mat-label>
+				<input matInput  placeholder="cgaoutamexob " [(ngModel)]="data.DetalleV.vIdUltimaMod"  readonly>
+			</mat-form-field>
+		</td>
+	
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Fecha ultima modificacion:</mat-label>
+				<input matInput   [(ngModel)]="data.DetalleV.vdFechaUltimaMod"  readonly>
+			</mat-form-field>
+		</td>
+<!-- 		</td>
+	<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Fecha Carga:</mat-label>
+				<input matInput  placeholder=" " [(ngModel)]="data.DetalleV.dtFechaCarga"  readonly>
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Status:</mat-label>
+				<input matInput  placeholder=" " [(ngModel)]="data.vEstatus"  readonly>
+			</mat-form-field>
+		</td> -->
+	<!-- 	<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Codigo Clave:</mat-label>
+				<input matInput  placeholder=" " [(ngModel)]="data.vCodClave"  readonly>
+			</mat-form-field>
+		</td> -->
+
+	
+	</tr>
+	
+</table>
+
+</mat-dialog-content>
+   </mat-tab>
+   <!-- <mat-tab  label="REINYECTADO" *ngIf="data.ConfirmationV.estatus == 'RR'"  >   -->
+	<mat-tab  label="RECIBIDO - REINYECCION" *ngIf="data.element.vEstatus == 'RECIBIDO - REINYECCION'"  >
+     <mat-dialog-content class="mat-typography">
+	<table class="example-full-width" id="prueba" ><tr>
+		<td >
+			<mat-form-field class="example-full-width">
+				<mat-label>Llave de Registro:</mat-label>
+				<input matInput [(ngModel)]= "data.DetalleRR.vRegLlave" readonly>
+				
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Fecha Proceso:</mat-label>
+				<input matInput placeholder="2021-04-06 00:00:00.0" [(ngModel)]="data.DetalleRR.dtFechaProceso"  readonly>
+				
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>ID de la Transaccion:</mat-label>
+				<input matInput   placeholder="000000000000001" [(ngModel)]="data.DetalleRR.vTransId"  readonly>
+				
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Numero de Autoizacion:</mat-label>
+				<input matInput  placeholder="000001" [(ngModel)]="data.DetalleRR.vNumAutoriza"  readonly>
+				
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Numero de Plastico:</mat-label>
+				<input matInput  placeholder="Numero de Pl�stico" [(ngModel)]="data.DetalleRR.vNoPlastico" readonly >
+				
+			</mat-form-field>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Fecha de TXN:</mat-label>
+				<input matInput  placeholder="210211" [(ngModel)]="data.DetalleRR.vFechaTxn"  readonly>
+				
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Importe de la TXN:</mat-label>
+				<input matInput  placeholder="400.01" [(ngModel)]="data.DetalleRR.mImporteTxn"  readonly>
+				
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Hora de la TXN:</mat-label>
+				<input matInput  placeholder="003532" [(ngModel)]="data.DetalleRR.vHoraTxn"  readonly>
+				
+			</mat-form-field>
+		</td>
+	
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Codigo de la Transaccion:</mat-label>
+				<input matInput  placeholder="05" [(ngModel)]="data.DetalleRR.vCodTra"  readonly>
+				
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Tipo de plan:</mat-label>
+				<input matInput  placeholder="00" [(ngModel)]="data.DetalleRR.vTipoPlan"  readonly>
+				
+			</mat-form-field>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Codigo de proceso:</mat-label>
+				<input matInput  placeholder="000000" [(ngModel)]="data.DetalleRR.vProcCode"  readonly>
+				
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Tipo moneda:</mat-label>
+				<input matInput  placeholder="484" [(ngModel)]="data.DetalleRR.vTipoMoneda"  readonly>
+				
+			</mat-form-field>
+		</td>
+	
+	
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Codigo de parcializacion:</mat-label>
+				<input matInput  placeholder="00" [(ngModel)]="data.DetalleRR.vParcializacion"  readonly>
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>ID de Giro:</mat-label>
+				<input matInput  placeholder="ID de Giro" [(ngModel)]="data.DetalleRR.vIdGiro" readonly >
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Numero de Afiliacion:</mat-label>        
+				<input matInput  placeholder="0000001" [(ngModel)]="data.DetalleRR.vNoAfiliacion" readonly >
+			</mat-form-field>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Numero de Afiliacion AMEX:</mat-label>
+				<input matInput  placeholder="0024794 " [(ngModel)]="data.DetalleRR.vNoAfiliacionAmex"  readonly>
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Razon Social:</mat-label>
+				<input matInput  placeholder="AGEN LLANTERA T BORUND" [(ngModel)]="data.DetalleRR.vRazonSocial" readonly >
+
+			</mat-form-field>
+		</td>
+	
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Numero de calle:</mat-label>
+				<input matInput  placeholder="AV TEOFILO BORUNDA NO 402" [(ngModel)]="data.DetalleRR.vCalleNo" readonly >
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Nombre de la Ciudad:</mat-label>
+				<input matInput  placeholder="CHIHUAHUA CHI" [(ngModel)]="data.DetalleRR.vCiudad"  readonly>
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Codigo del Estado:</mat-label>
+				<input matInput  placeholder="CH " [(ngModel)]="data.DetalleRR.vCodEstado "  readonly>
+			</mat-form-field>
+		</td>
+	</tr>
+	<tr>
+		
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Codigo del Pais:</mat-label>
+				<input matInput  placeholder="484" [(ngModel)]="data.DetalleRR.vCodPaisBr"  readonly>
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Codigo Postal:</mat-label>
+				<input matInput  placeholder="31000" [(ngModel)]="data.DetalleRR.vCodPostal"  readonly>
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Pos data:</mat-label>
+				<input matInput  placeholder="51110150030C " [(ngModel)]="data.DetalleRR.vPosdata"  readonly>
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>ID del Emisor:</mat-label>
+				<input matInput  placeholder="98 " [(ngModel)]="data.DetalleRR.vEmisor"  readonly>
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>ID del Adquirente:</mat-label>
+				<input matInput  placeholder="12 " [(ngModel)]="data.DetalleRR.vAdquirente"  readonly>
+			</mat-form-field>
+		</td>
+		</tr>
+	<tr>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Id ultima modificacion:</mat-label>
+				<input matInput  placeholder="cgaoutamexob " [(ngModel)]="data.DetalleRR.vIdUltimaMod"  readonly>
+			</mat-form-field>
+		</td>
+	
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Fecha ultima modificacion:</mat-label>
+				<input matInput   [(ngModel)]="data.DetalleRR.vdFechaUltimaMod"  readonly>
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Fecha ultima modificacion:</mat-label>
+				<input matInput   [(ngModel)]="data.DetalleRR.vdFechaUltimaMod"  readonly>
+			</mat-form-field>
+		</td>
+	
+	</tr> 
+</table>
+
+</mat-dialog-content>
+   </mat-tab>
+
+   <mat-tab  label="REINYECTADO" *ngIf="data.element.vEstatus == 'REINYECTADO'"  >
+	<mat-dialog-content class="mat-typography">
+   <table class="example-full-width" id="prueba" ><tr>
+	   <td >
+		   <mat-form-field class="example-full-width">
+			   <mat-label>Llave de Registro:</mat-label>
+			   <input matInput [(ngModel)]= "data.DetalleRR.vRegLlave" readonly>
+			   
+		   </mat-form-field>
+	   </td>
+	   <td>
+		   <mat-form-field class="example-full-width">
+			   <mat-label>Fecha Proceso:</mat-label>
+			   <input matInput placeholder="2021-04-06 00:00:00.0" [(ngModel)]="data.DetalleRR.dtFechaProceso"  readonly>
+			   
+		   </mat-form-field>
+	   </td>
+	   <td>
+		   <mat-form-field class="example-full-width">
+			   <mat-label>ID de la Transaccion:</mat-label>
+			   <input matInput   placeholder="000000000000001" [(ngModel)]="data.DetalleRR.vTransId"  readonly>
+			   
+		   </mat-form-field>
+	   </td>
+	   <td>
+		   <mat-form-field class="example-full-width">
+			   <mat-label>Numero de Autoizacion:</mat-label>
+			   <input matInput  placeholder="000001" [(ngModel)]="data.DetalleRR.vNumAutoriza"  readonly>
+			   
+		   </mat-form-field>
+	   </td>
+	   <td>
+		   <mat-form-field class="example-full-width">
+			   <mat-label>Numero de Plastico:</mat-label>
+			   <input matInput  placeholder="Numero de Pl�stico" [(ngModel)]="data.DetalleRR.vNoPlastico" readonly >
+			   
+		   </mat-form-field>
+	   </td>
+   </tr>
+   <tr>
+	   <td>
+		   <mat-form-field class="example-full-width">
+			   <mat-label>Fecha de TXN:</mat-label>
+			   <input matInput  placeholder="210211" [(ngModel)]="data.DetalleRR.vFechaTxn"  readonly>
+			   
+		   </mat-form-field>
+	   </td>
+	   <td>
+		   <mat-form-field class="example-full-width">
+			   <mat-label>Importe de la TXN:</mat-label>
+			   <input matInput  placeholder="400.01" [(ngModel)]="data.DetalleRR.mImporteTxn"  readonly>
+			   
+		   </mat-form-field>
+	   </td>
+	   <td>
+		   <mat-form-field class="example-full-width">
+			   <mat-label>Hora de la TXN:</mat-label>
+			   <input matInput  placeholder="003532" [(ngModel)]="data.DetalleRR.vHoraTxn"  readonly>
+			   
+		   </mat-form-field>
+	   </td>
+   
+	   <td>
+		   <mat-form-field class="example-full-width">
+			   <mat-label>Codigo de la Transaccion:</mat-label>
+			   <input matInput  placeholder="05" [(ngModel)]="data.DetalleRR.vCodTra"  readonly>
+			   
+		   </mat-form-field>
+	   </td>
+	   <td>
+		   <mat-form-field class="example-full-width">
+			   <mat-label>Tipo de plan:</mat-label>
+			   <input matInput  placeholder="00" [(ngModel)]="data.DetalleRR.vTipoPlan"  readonly>
+			   
+		   </mat-form-field>
+	   </td>
+   </tr>
+   <tr>
+	   <td>
+		   <mat-form-field class="example-full-width">
+			   <mat-label>Codigo de proceso:</mat-label>
+			   <input matInput  placeholder="000000" [(ngModel)]="data.DetalleRR.vProcCode"  readonly>
+			   
+		   </mat-form-field>
+	   </td>
+	   <td>
+		   <mat-form-field class="example-full-width">
+			   <mat-label>Tipo moneda:</mat-label>
+			   <input matInput  placeholder="484" [(ngModel)]="data.DetalleRR.vTipoMoneda"  readonly>
+			   
+		   </mat-form-field>
+	   </td>
+   
+   
+	   <td>
+		   <mat-form-field class="example-full-width">
+			   <mat-label>Codigo de parcializacion:</mat-label>
+			   <input matInput  placeholder="00" [(ngModel)]="data.DetalleRR.vParcializacion"  readonly>
+		   </mat-form-field>
+	   </td>
+	   <td>
+		   <mat-form-field class="example-full-width">
+			   <mat-label>ID de Giro:</mat-label>
+			   <input matInput  placeholder="ID de Giro" [(ngModel)]="data.DetalleRR.vIdGiro" readonly >
+		   </mat-form-field>
+	   </td>
+	   <td>
+		   <mat-form-field class="example-full-width">
+			   <mat-label>Numero de Afiliacion:</mat-label>        
+			   <input matInput  placeholder="0000001" [(ngModel)]="data.DetalleRR.vNoAfiliacion" readonly >
+		   </mat-form-field>
+	   </td>
+   </tr>
+   <tr>
+	   <td>
+		   <mat-form-field class="example-full-width">
+			   <mat-label>Numero de Afiliacion AMEX:</mat-label>
+			   <input matInput  placeholder="0024794 " [(ngModel)]="data.DetalleRR.vNoAfiliacionAmex"  readonly>
+		   </mat-form-field>
+	   </td>
+	   <td>
+		   <mat-form-field class="example-full-width">
+			   <mat-label>Razon Social:</mat-label>
+			   <input matInput  placeholder="AGEN LLANTERA T BORUND" [(ngModel)]="data.DetalleRR.vRazonSocial" readonly >
+
+		   </mat-form-field>
+	   </td>
+   
+	   <td>
+		   <mat-form-field class="example-full-width">
+			   <mat-label>Numero de calle:</mat-label>
+			   <input matInput  placeholder="AV TEOFILO BORUNDA NO 402" [(ngModel)]="data.DetalleRR.vCalleNo" readonly >
+		   </mat-form-field>
+	   </td>
+	   <td>
+		   <mat-form-field class="example-full-width">
+			   <mat-label>Nombre de la Ciudad:</mat-label>
+			   <input matInput  placeholder="CHIHUAHUA CHI" [(ngModel)]="data.DetalleRR.vCiudad"  readonly>
+		   </mat-form-field>
+	   </td>
+	   <td>
+		   <mat-form-field class="example-full-width">
+			   <mat-label>Codigo del Estado:</mat-label>
+			   <input matInput  placeholder="CH " [(ngModel)]="data.DetalleRR.vCodEstado "  readonly>
+		   </mat-form-field>
+	   </td>
+   </tr>
+   <tr>
+	   
+	   <td>
+		   <mat-form-field class="example-full-width">
+			   <mat-label>Codigo del Pais:</mat-label>
+			   <input matInput  placeholder="484" [(ngModel)]="data.DetalleRR.vCodPaisBr"  readonly>
+		   </mat-form-field>
+	   </td>
+	   <td>
+		   <mat-form-field class="example-full-width">
+			   <mat-label>Codigo Postal:</mat-label>
+			   <input matInput  placeholder="31000" [(ngModel)]="data.DetalleRR.vCodPostal"  readonly>
+		   </mat-form-field>
+	   </td>
+	   <td>
+		   <mat-form-field class="example-full-width">
+			   <mat-label>Pos data:</mat-label>
+			   <input matInput  placeholder="51110150030C " [(ngModel)]="data.DetalleRR.vPosdata"  readonly>
+		   </mat-form-field>
+	   </td>
+	   <td>
+		   <mat-form-field class="example-full-width">
+			   <mat-label>ID del Emisor:</mat-label>
+			   <input matInput  placeholder="98 " [(ngModel)]="data.DetalleRR.vEmisor"  readonly>
+		   </mat-form-field>
+	   </td>
+	   <td>
+		   <mat-form-field class="example-full-width">
+			   <mat-label>ID del Adquirente:</mat-label>
+			   <input matInput  placeholder="12 " [(ngModel)]="data.DetalleRR.vAdquirente"  readonly>
+		   </mat-form-field>
+	   </td>
+	   </tr>
+   <tr>
+	   <td>
+		   <mat-form-field class="example-full-width">
+			   <mat-label>Id ultima modificacion:</mat-label>
+			   <input matInput  placeholder="cgaoutamexob " [(ngModel)]="data.DetalleRR.vIdUltimaMod"  readonly>
+		   </mat-form-field>
+	   </td>
+   
+	   <td>
+		   <mat-form-field class="example-full-width">
+			   <mat-label>Fecha ultima modificacion:</mat-label>
+			   <input matInput   [(ngModel)]="data.DetalleRR.vdFechaUltimaMod"  readonly>
+		   </mat-form-field>
+	   </td>
+	   <td>
+		   <mat-form-field class="example-full-width">
+			   <mat-label>Fecha ultima modificacion:</mat-label>
+			   <input matInput   [(ngModel)]="data.DetalleRR.vdFechaUltimaMod"  readonly>
+		   </mat-form-field>
+	   </td>
+   
+   </tr> 
+</table>
+
+</mat-dialog-content>
+</mat-tab>
+
+<mat-tab  label="ABONO"  *ngIf="data.element.vEstatus == 'ABONO'" >  
+  <mat-dialog-content class="mat-typography">
+ <table class="example-full-width" id="prueba" ><tr>
+	 <td >
+		 <mat-form-field class="example-full-width">
+			 <mat-label>Fecha Carga:</mat-label>
+			 <input matInput [(ngModel)]= "data.DetalleCarga.dtFechaCarga" disabled="disabled">
+			 
+		 </mat-form-field>
+	 </td>
+	 <td>
+		 <mat-form-field class="example-full-width">
+			 <mat-label>Número Afiliación:</mat-label>
+			 <input matInput   [(ngModel)]="data.DetalleCarga.vNoAfiliacion" readonly>
+			 
+		 </mat-form-field>
+	 </td>
+	 <td>
+		 <mat-form-field class="example-full-width">
+			 <mat-label>Numero Autorizacion:</mat-label>
+			 <input matInput   [(ngModel)]="data.DetalleCarga.vAutorizacion" readonly>
+			 
+		 </mat-form-field>
+	 </td>
+	 <td>
+		 <mat-form-field class="example-full-width">
+			 <mat-label>Numero Tarjeta:</mat-label>
+			 <input matInput  [(ngModel)]="data.DetalleCarga.vNoPlastico" readonly>
+			 
+		 </mat-form-field>
+	 </td>
+	 <td>
+		 <mat-form-field class="example-full-width">
+			 <mat-label>Importe Transacción</mat-label>
+			 <input matInput   [(ngModel)]="data.DetalleCarga.mImporteTxn"  readonly>
+			 
+		 </mat-form-field>
+	 </td>
+ </tr>
+ <tr>
+	 <td>
+		 <mat-form-field class="example-full-width">
+			 <mat-label>Estatus Amex:</mat-label>
+			 <input matInput [(ngModel)]="data.DetalleCarga.estatusAMEX" readonly >
+			 
+		 </mat-form-field>
+	 </td>
+	 <td>
+		 <mat-form-field class="example-full-width">
+			 <mat-label>Codigo Error:</mat-label>
+			 <input matInput  placeholder="400.01"  [(ngModel)]="data.DetalleCarga.codigoError" readonly >
+			 
+		 </mat-form-field>
+	 </td>
+	 <td>
+		 <mat-form-field class="example-full-width">
+			 <mat-label>Descripción Error:</mat-label>
+			 <input matInput  placeholder="003532"  [(ngModel)]="data.DetalleCarga.descripcionError" readonly>
+			 
+		 </mat-form-field>
+	 </td>
+	 <td>
+		 <mat-form-field class="example-full-width">
+			 <mat-label> Área:</mat-label>
+			 <input matInput  placeholder="003532"   [(ngModel)]="data.DetalleCarga.vArea" readonly>
+			 
+		 </mat-form-field>
+	 </td>
+	 <td>
+		 <mat-form-field class="example-full-width">
+			 <mat-label> Movimiento:</mat-label>
+			 <input matInput  placeholder="003532"   [(ngModel)]="data.DetalleCarga.vMovimiento" readonly>
+			 
+		 </mat-form-field>
+	 </td>
+
+ </tr>
+ <tr>
+	 <td>
+		 <mat-form-field class="example-full-width">
+			 <mat-label> Proceso:</mat-label>
+			 <input matInput  placeholder="003532"    [(ngModel)]="data.DetalleCarga.vProceso" readonly>
+			 
+		 </mat-form-field>
+	 </td>
+	 <td>
+		 <mat-form-field class="example-full-width">
+			 <mat-label> Leyenda:</mat-label>
+			 <input matInput  placeholder="003532"   [(ngModel)]="data.DetalleCarga.vLeyenda" readonly>
+			 
+		 </mat-form-field>
+	 </td>
+	 <td>
+		 <mat-form-field class="example-full-width">
+			 <mat-label> DIVISA:</mat-label>
+			 <input matInput  placeholder="003532"  [(ngModel)]="data.DetalleCarga.vDivisa" readonly>
+			 
+		 </mat-form-field>
+	 </td>
+	 <td>
+		 <mat-form-field class="example-full-width">
+			 <mat-label> COBRO:</mat-label>
+			 <input matInput  placeholder="003532"   [(ngModel)]="data.DetalleCarga.vCobro" readonly>
+			 
+		 </mat-form-field>
+	 </td>
+	 
+	 <td>
+		 <mat-form-field class="example-full-width">
+			 <mat-label>Emisor:</mat-label>
+			 <input matInput  placeholder="484"  [(ngModel)]="data.DetalleCarga.vEmisor" readonly >
+			 
+		 </mat-form-field>
+	 </td>
+ </tr>
+ <tr>
+	 <td>
+		 <mat-form-field class="example-full-width">
+			 <mat-label>Adquirente:</mat-label>
+			 <input matInput  placeholder="484"  [(ngModel)]="data.DetalleCarga.vAdquirente" readonly >
+			 
+		 </mat-form-field>
+	 </td>
+ </tr>
+ 
+</table>
+
+</mat-dialog-content>
+
+</mat-tab>
+
+
+<mat-tab  label="CARGO"  *ngIf="data.element.vEstatus == 'CARGO'" >  
+  <mat-dialog-content class="mat-typography">
+ <table class="example-full-width" id="prueba" ><tr>
+	 <td >
+		 <mat-form-field class="example-full-width">
+			 <mat-label>Fecha Carga:</mat-label>
+			 <input matInput [(ngModel)]= "data.DetalleCarga.dtFechaCarga" disabled="disabled">
+			 
+		 </mat-form-field>
+	 </td>
+	 <td>
+		 <mat-form-field class="example-full-width">
+			 <mat-label>Número Afiliación:</mat-label>
+			 <input matInput   [(ngModel)]="data.DetalleCarga.vNoAfiliacion" readonly>
+			 
+		 </mat-form-field>
+	 </td>
+	 <td>
+		 <mat-form-field class="example-full-width">
+			 <mat-label>Numero Autorizacion:</mat-label>
+			 <input matInput   [(ngModel)]="data.DetalleCarga.vAutorizacion" readonly>
+			 
+		 </mat-form-field>
+	 </td>
+	 <td>
+		 <mat-form-field class="example-full-width">
+			 <mat-label>Numero Tarjeta:</mat-label>
+			 <input matInput  [(ngModel)]="data.DetalleCarga.vNoPlastico" readonly>
+			 
+		 </mat-form-field>
+	 </td>
+	 <td>
+		 <mat-form-field class="example-full-width">
+			 <mat-label>Importe Transacción</mat-label>
+			 <input matInput   [(ngModel)]="data.DetalleCarga.mImporteTxn"  readonly>
+			 
+		 </mat-form-field>
+	 </td>
+ </tr>
+ <tr>
+	 <td>
+		 <mat-form-field class="example-full-width">
+			 <mat-label>Estatus Amex:</mat-label>
+			 <input matInput [(ngModel)]="data.DetalleCarga.estatusAMEX" readonly >
+			 
+		 </mat-form-field>
+	 </td>
+	 <td>
+		 <mat-form-field class="example-full-width">
+			 <mat-label>Codigo Error:</mat-label>
+			 <input matInput  placeholder="400.01"  [(ngModel)]="data.DetalleCarga.codigoError" readonly >
+			 
+		 </mat-form-field>
+	 </td>
+	 <td>
+		 <mat-form-field class="example-full-width">
+			 <mat-label>Descripción Error:</mat-label>
+			 <input matInput  placeholder="003532"  [(ngModel)]="data.DetalleCarga.descripcionError" readonly>
+			 
+		 </mat-form-field>
+	 </td>
+	 <td>
+		 <mat-form-field class="example-full-width">
+			 <mat-label> Área:</mat-label>
+			 <input matInput  placeholder="003532"   [(ngModel)]="data.DetalleCarga.vArea" readonly>
+			 
+		 </mat-form-field>
+	 </td>
+	 <td>
+		 <mat-form-field class="example-full-width">
+			 <mat-label> Movimiento:</mat-label>
+			 <input matInput  placeholder="003532"   [(ngModel)]="data.DetalleCarga.vMovimiento" readonly>
+			 
+		 </mat-form-field>
+	 </td>
+
+ </tr>
+ <tr>
+	 <td>
+		 <mat-form-field class="example-full-width">
+			 <mat-label> Proceso:</mat-label>
+			 <input matInput  placeholder="003532"    [(ngModel)]="data.DetalleCarga.vProceso" readonly>
+			 
+		 </mat-form-field>
+	 </td>
+	 <td>
+		 <mat-form-field class="example-full-width">
+			 <mat-label> Leyenda:</mat-label>
+			 <input matInput  placeholder="003532"   [(ngModel)]="data.DetalleCarga.vLeyenda" readonly>
+			 
+		 </mat-form-field>
+	 </td>
+	 <td>
+		 <mat-form-field class="example-full-width">
+			 <mat-label> DIVISA:</mat-label>
+			 <input matInput  placeholder="003532"  [(ngModel)]="data.DetalleCarga.vDivisa" readonly>
+			 
+		 </mat-form-field>
+	 </td>
+	 <td>
+		 <mat-form-field class="example-full-width">
+			 <mat-label> COBRO:</mat-label>
+			 <input matInput  placeholder="003532"   [(ngModel)]="data.DetalleCarga.vCobro" readonly>
+			 
+		 </mat-form-field>
+	 </td>
+	 
+	 <td>
+		 <mat-form-field class="example-full-width">
+			 <mat-label>Emisor:</mat-label>
+			 <input matInput  placeholder="484"  [(ngModel)]="data.DetalleCarga.vEmisor" readonly >
+			 
+		 </mat-form-field>
+	 </td>
+ </tr>
+ <tr>
+	 <td>
+		 <mat-form-field class="example-full-width">
+			 <mat-label>Adquirente:</mat-label>
+			 <input matInput  placeholder="484"  [(ngModel)]="data.DetalleCarga.vAdquirente" readonly >
+			 
+		 </mat-form-field>
+	 </td>
+ </tr>
+ 
+</table>
+
+</mat-dialog-content>
+
+</mat-tab>
+
+   <mat-tab  label="CARGO-ABONO"  *ngIf="data.element.vEstatus == 'RECIBIDO - ABONO'" >  
+     <mat-dialog-content class="mat-typography">
+	<table class="example-full-width" id="prueba" ><tr>
+		<td >
+			<mat-form-field class="example-full-width">
+				<mat-label>Fecha Carga:</mat-label>
+				<input matInput [(ngModel)]= "data.DetalleCarga.dtFechaCarga" disabled="disabled">
+				
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Número Afiliación:</mat-label>
+				<input matInput   [(ngModel)]="data.DetalleCarga.vNoAfiliacion" readonly>
+				
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Numero Autorizacion:</mat-label>
+				<input matInput   [(ngModel)]="data.DetalleCarga.vAutorizacion" readonly>
+				
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Numero Tarjeta:</mat-label>
+				<input matInput  [(ngModel)]="data.DetalleCarga.vNoPlastico" readonly>
+				
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Importe Transacción</mat-label>
+				<input matInput   [(ngModel)]="data.DetalleCarga.mImporteTxn"  readonly>
+				
+			</mat-form-field>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Estatus Amex:</mat-label>
+				<input matInput [(ngModel)]="data.DetalleCarga.estatusAMEX" readonly >
+				
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Codigo Error:</mat-label>
+				<input matInput  placeholder="400.01"  [(ngModel)]="data.DetalleCarga.codigoError" readonly >
+				
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Descripción Error:</mat-label>
+				<input matInput  placeholder="003532"  [(ngModel)]="data.DetalleCarga.descripcionError" readonly>
+				
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label> Área:</mat-label>
+				<input matInput  placeholder="003532"   [(ngModel)]="data.DetalleCarga.vArea" readonly>
+				
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label> Movimiento:</mat-label>
+				<input matInput  placeholder="003532"   [(ngModel)]="data.DetalleCarga.vMovimiento" readonly>
+				
+			</mat-form-field>
+		</td>
+
+	</tr>
+	<tr>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label> Proceso:</mat-label>
+				<input matInput  placeholder="003532"    [(ngModel)]="data.DetalleCarga.vProceso" readonly>
+				
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label> Leyenda:</mat-label>
+				<input matInput  placeholder="003532"   [(ngModel)]="data.DetalleCarga.vLeyenda" readonly>
+				
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label> DIVISA:</mat-label>
+				<input matInput  placeholder="003532"  [(ngModel)]="data.DetalleCarga.vDivisa" readonly>
+				
+			</mat-form-field>
+		</td>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label> COBRO:</mat-label>
+				<input matInput  placeholder="003532"   [(ngModel)]="data.DetalleCarga.vCobro" readonly>
+				
+			</mat-form-field>
+		</td>
+		
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Emisor:</mat-label>
+				<input matInput  placeholder="484"  [(ngModel)]="data.DetalleCarga.vEmisor" readonly >
+				
+			</mat-form-field>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<mat-form-field class="example-full-width">
+				<mat-label>Adquirente:</mat-label>
+				<input matInput  placeholder="484"  [(ngModel)]="data.DetalleCarga.vAdquirente" readonly >
+				
+			</mat-form-field>
+		</td>
+	</tr>
+	
+</table>
+
+</mat-dialog-content>
+
+   </mat-tab>
+</mat-tab-group>
+<br>
+
+<mat-dialog-actions *ngIf="data.element.vEstatus == 'REINYECTADO'" >
+	<button mat-raised-button color="warn" mat-dialog-close>CANCELAR</button>
+    <button  mat-raised-button color="success"   (click)="exceldetalle()" mat-dialog-close>Descargar</button>
+</mat-dialog-actions>
+<mat-dialog-actions *ngIf="data.element.vEstatus == 'ABONO'" >
+	<button mat-raised-button color="warn" mat-dialog-close>CANCELAR</button>
+    <button  mat-raised-button color="success"   (click)="exceldetalle()" mat-dialog-close>Descargar</button>
+</mat-dialog-actions>
+<mat-dialog-actions *ngIf="data.element.vEstatus == 'CARGO'" >
+	<button mat-raised-button color="warn" mat-dialog-close>CANCELAR</button>
+    <button  mat-raised-button color="success"   (click)="exceldetalle()" mat-dialog-close>Descargar</button>
+</mat-dialog-actions>
+<mat-dialog-actions *ngIf="data.element.vEstatus == 'RECIBIDO - ABONO'" >
+	<button mat-raised-button color="warn" mat-dialog-close>CANCELAR</button>
+    <button  mat-raised-button color="success"   (click)="exceldetalle()" mat-dialog-close>Descargar</button>
+    <button  mat-raised-button color="primary" (click)="openCargoAbono(data)" mat-dialog-close> Cargo/Abono</button> 
+    <!-- <button *ngIf="botonReinyeccion" mat-raised-button color="primary" (click)="openReinyeccion(data)" mat-dialog-close>Reinyeccion</button>
+    <button *ngIf="botonCargoAbono" mat-raised-button color="primary" (click)="openCargoAbono(data)" mat-dialog-close> Cargo/Abono</button>  -->
+</mat-dialog-actions>
+<mat-dialog-actions *ngIf="data.element.vEstatus == 'RECIBIDO - CARGO'" >
+	<button mat-raised-button color="warn" mat-dialog-close>CANCELAR</button>
+    <button  mat-raised-button color="success"   (click)="exceldetalle()" mat-dialog-close>Descargar</button>
+    <button  mat-raised-button color="primary" (click)="openCargoAbono(data)" mat-dialog-close> Cargo/Abono</button> 
+    <!-- <button *ngIf="botonReinyeccion" mat-raised-button color="primary" (click)="openReinyeccion(data)" mat-dialog-close>Reinyeccion</button>
+    <button *ngIf="botonCargoAbono" mat-raised-button color="primary" (click)="openCargoAbono(data)" mat-dialog-close> Cargo/Abono</button>  -->
+</mat-dialog-actions>
+<mat-dialog-actions *ngIf="data.element.vEstatus == 'RECIBIDO'" >
+	<button mat-raised-button color="warn" mat-dialog-close>CANCELAR</button>
+    <button  mat-raised-button color="success"   (click)="exceldetalle()" mat-dialog-close>Descargar</button>
+	<button  mat-raised-button color="primary" (click)="openReinyeccion(data)" mat-dialog-close>Reinyeccion</button>
+    <button  mat-raised-button color="primary" (click)="openCargoAbono(data)" mat-dialog-close> Cargo/Abono</button> 
+    <!-- <button *ngIf="botonReinyeccion" mat-raised-button color="primary" (click)="openReinyeccion(data)" mat-dialog-close>Reinyeccion</button>
+    <button *ngIf="botonCargoAbono" mat-raised-button color="primary" (click)="openCargoAbono(data)" mat-dialog-close> Cargo/Abono</button>  -->
+</mat-dialog-actions>
+<mat-dialog-actions *ngIf="data.element.vEstatus == 'RECIBIDO - REINYECCION'" >
+	<button mat-raised-button color="warn" mat-dialog-close>CANCELAR</button>
+    <button  mat-raised-button color="success"   (click)="exceldetalle()" mat-dialog-close>Descargar</button>
+	<button  mat-raised-button color="primary" (click)="openReinyeccion(data)" mat-dialog-close>Reinyeccion</button>
+    <!-- <button *ngIf="botonReinyeccion" mat-raised-button color="primary" (click)="openReinyeccion(data)" mat-dialog-close>Reinyeccion</button>
+    <button *ngIf="botonCargoAbono" mat-raised-button color="primary" (click)="openCargoAbono(data)" mat-dialog-close> Cargo/Abono</button>  -->
+</mat-dialog-actions>

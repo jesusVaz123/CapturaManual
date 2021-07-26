@@ -1,0 +1,139 @@
+<div class="example-container">
+
+
+</div>
+<div class="user-container">
+  <div class="container">
+    <h2 layout="row" layout-align="center center">Rechazos Adquirente Banorte</h2>
+    <table class="example-full-width"  [formGroup]="Rechazo">
+     <tr>
+      <td>
+       <mat-form-field appearance="fill">
+         <mat-label>Fecha Inicial</mat-label> 
+         <input matInput [matDatepicker]="picker" [value]="fechaactual.value"  formControlName="pvFechaIni">
+         <mat-datepicker-toggle matSuffix [for]="picker" id = pvFechaIni></mat-datepicker-toggle>
+         <mat-datepicker #picker></mat-datepicker>
+       </mat-form-field>
+     </td>
+     <td>
+       <mat-form-field appearance="fill">
+        <mat-label>Fecha Final</mat-label>
+        <input matInput [matDatepicker]="picker1" [value]="fechaactual.value"  formControlName="pvFechaFin">
+        <mat-datepicker-toggle matSuffix [for]="picker1"  id = pvFechaFin></mat-datepicker-toggle>
+        <mat-datepicker #picker1></mat-datepicker>
+      </mat-form-field>
+    </td>
+     <td>
+     	<mat-form-field class="example-full-width">
+      		<mat-label>Filtro1</mat-label>
+      		<input matInput #postalCode maxlength="5" placeholder="Filtro1" >
+      <!-- <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint> -->
+    	</mat-form-field>
+	</td>
+<!--     <td >
+          <mat-form-field appearance="fill" style="width:12vw" >
+            <mat-label>Fecha Estatus</mat-label>
+            <input matInput [matDatepicker]="picker2" [value]="fechaactual.value" >
+            <mat-datepicker-toggle matSuffix [for]="picker2" ></mat-datepicker-toggle>
+            <mat-datepicker #picker2></mat-datepicker>
+          </mat-form-field>
+        </td> -->
+     <td>
+          <mat-form-field appearance="fill">
+            <mat-label>Adquirente</mat-label>
+            <mat-select  formControlName="pvEstatus" multiple >
+              <mat-option value="cadena"  *ngFor="let estatus of estatus" [value]="estatus.claveCatalogo">{{estatus.descripcionCatalogo}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </td>
+ 
+  <td> 
+    <ng-container matColumnDef="myColumn">
+     <button mat-raised-button color="primary" (click)="onSubmit()" >BUSCAR</button>
+   </ng-container>
+ </td>
+ <td> 
+  <ng-container matColumnDef="myColumn">
+    <button  mat-raised-button color="success" (click)="exportexcel()" >Descargar</button>
+  </ng-container>
+</td>
+
+</tr>
+</table>
+
+<div class="mat-elevation-z8">
+  <mat-form-field class="filter">
+    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filtrar Campos">
+  </mat-form-field>
+  <table mat-table [dataSource]="dataRechazoSintaxis"  id="rechazosintaxis">
+    <ng-container matColumnDef="myColumn">
+      <th mat-header-cell *matHeaderCellDef > Accion </th>
+      <td mat-cell *matCellDef="let element" >
+        <button mat-raised-button color="primary"  >Modificar</button>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="dtFechaProceso">
+      <th mat-header-cell *matHeaderCellDef> Fecha de Proceso</th>
+      <td mat-cell *matCellDef="let element">  {{element.dtFechaProceso | date:'yyyy-MM-dd'}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="vNoAfiliacion">
+      <th mat-header-cell *matHeaderCellDef> No. Afiliación </th>
+      <td mat-cell *matCellDef="let element">  {{element.vNoAfiliacion}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="vNumAutoriza">
+      <th mat-header-cell *matHeaderCellDef>  No. Autorización </th>
+      <td mat-cell *matCellDef="let element">  {{element.vNumAutoriza}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="vNoPlastico">
+      <th mat-header-cell *matHeaderCellDef> No. Plastico </th>
+      <td mat-cell *matCellDef="let element"> {{element.vNoPlastico}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="vNumRef">
+      <th mat-header-cell *matHeaderCellDef> No. de Referencia</th>
+      <td mat-cell *matCellDef="let element"> {{element.vNumRef}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="mImpTxn">
+      <th mat-header-cell *matHeaderCellDef> Importe TXN </th>
+      <td mat-cell *matCellDef="let element"> {{element.mImpTxn| currency:"$"}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="vFeTxn">
+      <th mat-header-cell *matHeaderCellDef> Fecha TXN </th>
+      <td mat-cell *matCellDef="let element"> {{element.vFeTxn}} </td>
+    </ng-container>
+
+   <!--  <ng-container matColumnDef="vArqc">
+      <th mat-header-cell *matHeaderCellDef> ARQC </th>
+      <td mat-cell *matCellDef="let element"> {{element.vArqc}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="vRrn">
+      <th mat-header-cell *matHeaderCellDef> RRN </th>
+      <td mat-cell *matCellDef="let element"> {{element.vRrn}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="vRegLlave">
+      <th mat-header-cell *matHeaderCellDef> Reg. llave </th>
+      <td mat-cell *matCellDef="let element"> {{element.vRegLlave}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="vPlataforma">
+      <th mat-header-cell *matHeaderCellDef> Plataforma </th>
+      <td mat-cell *matCellDef="let element"> {{element.vPlataforma}} </td>
+    </ng-container> -->
+
+
+
+
+    <tr mat-header-row *matHeaderRowDef="sintaxisColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: sintaxisColumns;"></tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>

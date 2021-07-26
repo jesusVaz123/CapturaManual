@@ -1,0 +1,30 @@
+{
+  "back": {
+    "label": "Menú principal",
+    "path": "main",
+    "more": true
+  },
+  "title": "Seguridad",
+  "menu": [
+    {
+      "label": "Usuarios del sistema",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Módulos del sistema",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Perfiles de usuario",
+      "path": "",
+      "more": false
+    },
+    {
+      "label": "Cambio de password",
+      "path": "",
+      "more": true
+    }
+  ]
+}

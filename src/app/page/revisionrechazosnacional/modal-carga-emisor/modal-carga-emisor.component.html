@@ -1,0 +1,104 @@
+<div class="user-container">
+  <mat-dialog-content class="mat-typography">
+    <h2 layout="row" layout-align="center center">Editar</h2>
+    <table class="example-full-width" [formGroup]="detalleEmisor" class="mat-elevation-z8">
+      <tr>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>fecha_lote :</mat-label><input matInput formControlName="fecha_lote" id="fecha_lote">
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>vTipoTxn :</mat-label><input matInput formControlName="vTipoTxn" id="vTipoTxn">
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>mImpTxn:</mat-label><input matInput formControlName="mImpTxn" id="mImpTxn">
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>vNumCuenta :</mat-label><input matInput formControlName="vNumCuenta" id="vNumCuenta">
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>vNumRef :</mat-label><input matInput formControlName="vNumRef" id="vNumRef">
+          </mat-form-field>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>iClaveMoneda:</mat-label><input matInput formControlName="iClaveMoneda" id="iClaveMoneda">
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>iImpTasa :</mat-label><input matInput formControlName="iImpTasa" id="iImpTasa">
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>pob_negocio :</mat-label><input matInput formControlName="pob_negocio" id="pob_negocio">
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>cod_cat_neg :</mat-label><input matInput formControlName="cod_pais_neg" id="cod_pais_neg">
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>cod_cat_neg :</mat-label><input matInput formControlName="cod_cat_neg" id="cod_cat_neg">
+          </mat-form-field>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>cod_postal_neg :</mat-label><input matInput formControlName="cod_postal_neg" id="cod_postal_neg">
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>rfc :</mat-label><input matInput formControlName="cod_est_prov" id="cod_est_prov">
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>iEmisor :</mat-label><input matInput formControlName="iEmisor" id="iEmisor">
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>rfc :</mat-label><input matInput formControlName="rfc" id="rfc">
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>vFolioRechazo :</mat-label><input matInput formControlName="vFolioRechazo" id="vFolioRechazo">
+          </mat-form-field>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>iAdquirente :</mat-label><input matInput formControlName="iAdquirente" id="iAdquirente">
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>iEstatus :</mat-label><input matInput formControlName="iEstatus" id="iEstatus">
+          </mat-form-field>
+        </td>
+      </tr>
+    </table><br>
+    <div class="col-md-12 text-end">
+      <button mat-raised-button color="primary" (click)="actualizarEmisor()">Actualizar</button>
+    </div>
+    
+  </mat-dialog-content>
+</div>
